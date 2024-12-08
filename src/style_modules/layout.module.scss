@@ -1,0 +1,179 @@
+$header-footer: var(--layout-bg-color);
+$subheader: var(--layout-sub-drk-bg-color);
+$announcement: var(--layout-announce-bg-color);
+$layout-font-color: white;
+
+/*General Header and Footer Styling Values*/
+.headerContainer {
+  width: 100%;
+  background-color: $header-footer;
+  padding: 0 2rem 0 2rem;
+  box-shadow: 0px 2px 5px black;
+}
+.headerWrapper {
+  display: flex;
+  padding: 0.9rem 0 0.9rem 0;
+}
+.logoContainer {
+  font-family: var(--font-formal-family);
+  font-size: clamp(2rem, 1.5rem, 3rem);
+  text-decoration: none;
+  font-weight: 600;
+  color: $layout-font-color;
+  margin-right: auto;
+}
+.footerContainer {
+  color: $layout-font-color;
+  background-color: $header-footer;
+}
+.footerWrapper {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: var(--font-formal-family);
+}
+.subHeaderContainer {
+  width: 100%;
+  background-color: $subheader;
+  font-size: 1.5rem;
+}
+.announcementContainer {
+  border-radius: 10px;
+  margin-top: 1rem;
+  width: 80%;
+  background-color: $announcement;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-formal-family);
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+.navbar ul .navListOpt:hover {
+  background-color: var(--layout-sub-hover-color);
+  transition: background-color 0.5s;
+}
+.navbar ul li a {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-family: var(--font-formal-family);
+  padding: 16px 12px;
+  text-shadow: 0px 2px 5px rgb(17, 17, 17);
+}
+/*NavOpt Component Selectors*/
+.navOpt {
+  background-color: rgb(63, 63, 63);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 8rem;
+  width: 250px;
+  border-radius: 5px;
+  animation: fadeInList 0.3s;
+  z-index: 999;
+}
+.navOpt li {
+  padding: 0.2rem 0.5rem;
+}
+.navOpt li:hover {
+  background-color: rgb(99, 99, 99);
+}
+.navOpt li a {
+  font-size: 1.3rem;
+  width: 100%;
+}
+/*Search Bar Container Styling Values*/
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.searchBarContainer input {
+  width: 100%;
+}
+.searchInput::placeholder {
+  color: rgb(172, 172, 172);
+}
+.searchInput {
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  border: none;
+  padding: 0.7rem 0.2rem 0.7rem 0.8rem;
+  font-size: 1rem;
+  color: rgb(228, 228, 228);
+  font-weight: 600;
+}
+.searchBtn {
+  border: none;
+  outline: none;
+  padding: 0.65rem 0.7rem 0.6rem 0.7rem;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+.searchBtn,
+.searchInput {
+  background-color: rgb(77, 77, 77);
+}
+
+/*Login Container Style Values*/
+.loginContainer {
+  display: flex;
+  align-items: center;
+}
+.loginContainer button {
+  margin: 0 0.3rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: clamp(0.7rem, 1rem, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+.loginContainer button:hover {
+  cursor: pointer;
+}
+.loginContainer button:nth-child(1) {
+  background-color: $header-footer;
+  color: white;
+}
+.loginContainer button:nth-child(1):hover {
+  background-color: $subheader;
+}
+.loginContainer button:nth-child(2):hover {
+  background-color: $header-footer;
+  color: white;
+}
+.loginContainer button:nth-child(1):hover,
+.loginContainer button:nth-child(2):hover {
+  transition: background-color 0.4s;
+  box-shadow: 0px 1px 5px black;
+}
+.rightHeaderContainer {
+  display: flex;
+}
+@media only screen and (max-width: 1024px) {
+  .subHeaderContainer {
+    display: none;
+  }
+  .searchBarContainer,
+  .searchBtn {
+    display: none;
+  }
+  .headerContainer {
+    padding: 0 1rem 0 1rem;
+  }
+  .loginContainer button {
+    padding: 0.5rem 0.8rem;
+  }
+}
+@keyframes fadeInList {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
