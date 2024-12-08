@@ -15,7 +15,7 @@ function RecommendedItems() {
             color="white"
             className={homestyle.iconWidget}
           />
-          <h3>Recommended Items</h3>
+          <h3>Recommended</h3>
         </div>
         <div className={homestyle.widgetHeaderRight}>
           <select className={homestyle.widgetSelectItems}>

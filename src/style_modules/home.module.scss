@@ -148,7 +148,6 @@
   font-weight: 600;
   font-size: clamp(0.5rem, 1rem, 1.5rem);
   padding: 0.5rem 1rem;
-  margin-right: 10px;
   transition: background-color 0.4s;
 }
 .widgetSelectItems {
@@ -160,12 +159,11 @@
   background-color: rgb(27, 27, 27);
   color: white;
   border: none;
-  margin-right: 10px;
   font-size: clamp(0.5rem, 1.1rem, 1.5rem);
   border-right: 10px solid transparent;
 }
 .widgetSelectItems option {
-  font-size: 1.1rem;
+  font-size: clamp(0.5rem, 1.1rem, 1.5rem);
 }
 .widgetMoreBtn:hover {
   background-color: var(--layout-bg-color);
