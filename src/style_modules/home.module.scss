@@ -81,7 +81,7 @@
 .smallWrapperHor {
   overflow: hidden;
   width: 100%;
-  height: 180px;
+  height: 190px;
   position: relative;
 }
 .smallTrackHor {
@@ -92,7 +92,6 @@
   align-items: center;
   gap: 15px;
   width: 200%;
-  max-height: 180px;
   animation: slide 20s linear infinite;
 }
 .smallTrackHor:hover {
@@ -102,10 +101,6 @@
   height: auto;
   cursor: pointer;
 }
-.smallHor:hover {
-  border: 4px solid goldenrod;
-  transform: scale(0.95);
-}
 .smallHor img {
   object-fit: cover;
   object-position: center;
@@ -114,7 +109,10 @@
   animation-fill-mode: both;
   animation-delay: 1s;
 }
-
+.smallHor img:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s;
+}
 /*Widget Styling*/
 .widgetContainer {
   border-radius: 5px;
@@ -407,29 +405,47 @@
   .bigVer {
     margin-right: 0.5rem;
   }
+  .smallTrackHor {
+    width: 350%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+  .smallWrapperHor {
+    height: 140px;
+  }
 }
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   .smallWrapperHor {
     height: 120px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1000px) {
+@media screen and (min-width: 820px) and (max-width: 999px) {
   .smallWrapperHor {
-    height: 140px;
+    height: 150px;
   }
 }
-@media screen and (min-width: 500px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 819px) {
   .smallWrapperHor {
-    height: 100px;
+    height: 190px;
+  }
+}
+@media screen and (min-width: 626px) and (max-width: 767px) {
+  .smallWrapperHor {
+    height: 180px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 625px) {
+  .smallWrapperHor {
+    height: 165px;
   }
 }
 @media screen and (min-width: 400px) and (max-width: 500px) {
   .smallWrapperHor {
-    height: 70px;
+    height: 100px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 399px) {
   .smallWrapperHor {
-    height: 50px;
+    height: 90px;
   }
 }
