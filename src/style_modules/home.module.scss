@@ -184,6 +184,13 @@
   background-color: var(--home-inner-container-bg-color);
   padding: 0.8rem 0.5rem;
 }
+.watching {
+  color: gray;
+  font-style: italic;
+}
+.rating {
+  color: rgb(238, 184, 5);
+}
 .classifiedWrapper {
   display: flex;
   width: 100%;
@@ -218,6 +225,7 @@
   text-decoration: none;
   padding: 0.2rem 0.3rem;
   border-radius: 7px;
+  font-size: clamp(0.6rem, 0.8rem, 0.9rem);
 }
 .sellerContainer {
   display: flex;
@@ -227,7 +235,6 @@
 }
 .adPrice {
   font-weight: 600;
-  font-size: clamp(1rem, 1.2rem, 1.3rem);
 }
 .adShipping,
 .adPrice {
@@ -237,9 +244,12 @@
   font-weight: 600;
 }
 .adTitle {
-  font-size: clamp(1rem, 1.2rem, 1.3rem);
   margin-bottom: 0.6em;
   cursor: pointer;
+}
+.adTitle,
+.adPrice {
+  font-size: clamp(0.9rem, 1.1rem, 1.2rem);
 }
 .adTitle:hover {
   text-decoration: underline;
