@@ -100,9 +100,11 @@
 }
 .smallHor {
   height: auto;
+  cursor: pointer;
 }
 .smallHor:hover {
-  transform: scale(0.9);
+  border: 4px solid goldenrod;
+  transform: scale(0.95);
 }
 .smallHor img {
   object-fit: cover;
