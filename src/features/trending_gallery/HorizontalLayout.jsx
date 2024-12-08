@@ -6,14 +6,24 @@ function HorizontalLayout({ gallery }) {
       <div className={homestyle.bigHor}>
         <img src={gallery[0].photoMeta.url} alt={gallery[0].title} />
       </div>
+      {/**Carousel Layout*/}
       <div className={homestyle.smallWrapperHor}>
-        {gallery.slice(1).map((photo) => {
-          return (
-            <div className={homestyle.smallHor} key={photo.id}>
-              <img src={photo.photoMeta.url} alt={photo.title} />
-            </div>
-          );
-        })}
+        <div className={homestyle.smallTrackHor}>
+          {gallery.slice(1).map((photo) => {
+            return (
+              <div className={homestyle.smallHor} key={photo.id}>
+                <img src={photo.photoMeta.url} alt={photo.title} />
+              </div>
+            );
+          })}
+          {gallery.slice(1).map((photo) => {
+            return (
+              <div className={homestyle.smallHor} key={photo.id}>
+                <img src={photo.photoMeta.url} alt={photo.title} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

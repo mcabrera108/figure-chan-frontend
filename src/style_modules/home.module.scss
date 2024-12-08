@@ -72,9 +72,6 @@
   max-height: 500px;
   margin: 1rem 0;
 }
-.trendingWrapperHor img {
-  animation: fade-slide-in 1s ease-in;
-}
 .trendingWrapperHor .bigHor img {
   width: 100%;
   max-height: 500px;
@@ -82,19 +79,36 @@
   object-position: center;
 }
 .smallWrapperHor {
-  display: flex;
-  gap: 15px;
+  overflow: hidden;
   width: 100%;
-  max-height: 300px;
+  height: 180px;
+  position: relative;
+}
+.smallTrackHor {
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 200%;
+  max-height: 180px;
+  animation: slide 20s linear infinite;
+}
+.smallTrackHor:hover {
+  animation-play-state: paused;
 }
 .smallHor {
   height: auto;
+}
+.smallHor:hover {
+  transform: scale(0.9);
 }
 .smallHor img {
   object-fit: cover;
   object-position: center;
   max-width: 100%;
-  max-height: 300px;
+  max-height: 180px;
   animation-fill-mode: both;
   animation-delay: 1s;
 }
@@ -321,7 +335,14 @@
     transform: translate(0);
   }
 }
-
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .mainContentContainer {
     width: 100%;
@@ -366,12 +387,6 @@
   .slideImg {
     width: 100%;
   }
-  .smallWrapperHor {
-    display: flex;
-    gap: 5px;
-    width: 100%;
-    max-height: 300px;
-  }
   .smallWrapperVer {
     gap: 5px;
   }
@@ -381,5 +396,30 @@
   }
   .bigVer {
     margin-right: 0.5rem;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+  .smallWrapperHor {
+    height: 120px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .smallWrapperHor {
+    height: 140px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .smallWrapperHor {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  .smallWrapperHor {
+    height: 70px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .smallWrapperHor {
+    height: 50px;
   }
 }
