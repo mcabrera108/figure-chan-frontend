@@ -16,7 +16,7 @@ import godzilla from "../assets/godzilla.jpeg";
 const getPhotoGallery = [
   {
     title: "Photo_1",
-    photoMeta: { url: bannerfigure, width: 500, height: 500 },
+    photoMeta: { url: crowloh, width: 500, height: 500 },
     id: uuid(),
     productURL: "/",
     likes: 10000,

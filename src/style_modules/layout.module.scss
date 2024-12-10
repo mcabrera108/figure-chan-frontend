@@ -2,16 +2,19 @@ $header-footer: var(--layout-bg-color);
 $subheader: var(--layout-sub-drk-bg-color);
 $announcement: var(--layout-announce-bg-color);
 $layout-font-color: white;
+$subheader-mobile: var(--layout-sub-drk-bg-color);
 
 /*General Header and Footer Styling Values*/
 .headerContainer {
+  position: relative;
   width: 100%;
   background-color: $header-footer;
   padding: 0 2rem 0 2rem;
-  box-shadow: 0px 2px 5px black;
+  box-shadow: 0px 1px 4px black;
 }
 .headerWrapper {
   display: flex;
+  align-items: center;
   padding: 0.9rem 0 0.9rem 0;
 }
 .logoContainer {
@@ -21,6 +24,25 @@ $layout-font-color: white;
   font-weight: 600;
   color: $layout-font-color;
   margin-right: auto;
+}
+.menuContainer {
+  height: 25px;
+  width: 35px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.menuContainer .menu {
+  position: relative;
+  height: 100%;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footerContainer {
   color: $layout-font-color;
@@ -108,13 +130,96 @@ $layout-font-color: white;
 .searchBtn {
   border: none;
   outline: none;
-  padding: 0.65rem 0.7rem 0.6rem 0.7rem;
+  padding: 0.65rem 0.7rem 0.63rem 0.7rem;
   border-radius: 0 20px 20px 0;
   cursor: pointer;
 }
 .searchBtn,
 .searchInput {
   background-color: rgb(77, 77, 77);
+}
+.searchBarContainerMobile {
+  padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+  margin-right: 0.5rem;
+}
+.searchBarContainerMobile:active {
+  background-color: $subheader;
+}
+/*Search Area Styling*/
+.searchAreaContainer {
+  /*Display None by default until user clicks the magnifying glass*/
+  width: 100%;
+  top: 100%;
+  left: 0;
+  position: absolute;
+  z-index: 10002;
+  padding: 0.5em 0.5em;
+  background-color: $subheader-mobile;
+}
+.searchAreaWrapper {
+  position: relative;
+}
+.searchAreaInput {
+  border-radius: 10px;
+  padding: 0.5em 1.5em 0.5em 2.3em;
+  font-size: 1rem;
+  width: 100%;
+  border: 2px solid gray;
+  font-family: var(--font-formal-family);
+}
+.searchAreaInput:focus {
+  box-shadow: none;
+  outline: 2px solid $subheader;
+}
+.searchSvg {
+  position: absolute;
+  left: 0.5em;
+  top: 0.4em;
+}
+.headerBanner {
+  width: 120px;
+}
+.searchBtnMobile {
+  background: none;
+  outline: none;
+  border: none;
+}
+.loginContainerMobile {
+  display: flex;
+}
+.loginContainerMobile a {
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: var(--font-formal-family);
+  font-weight: 500;
+  margin-right: 4px;
+  padding: 8px 2px 8px 2px;
+  border-radius: 5px;
+}
+.loginContainerMobile a:visited {
+  text-decoration: none;
+}
+
+/*Go To Top Button Styling*/
+.goToTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(124, 124, 124, 0.74);
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0);
+  border: none;
+  bottom: 5%;
+  right: 5%;
+  z-index: 1000;
+  cursor: pointer;
+  line-height: 30px;
+}
+.goToTopHidden {
+  display: none;
 }
 
 /*Login Container Style Values*/
@@ -125,49 +230,80 @@ $layout-font-color: white;
 .loginContainer button {
   margin: 0 0.3rem;
   padding: 0.6rem 1.2rem;
-  border-radius: 10px;
+  border-radius: 5px;
   outline: none;
   border: none;
   font-size: clamp(0.7rem, 1rem, 2rem);
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.1rem;
 }
 .loginContainer button:hover {
   cursor: pointer;
 }
-.loginContainer button:nth-child(1) {
+.loginContainer button:nth-child(1),
+.loginContainerMobile a:nth-child(1) {
   background-color: $header-footer;
   color: white;
 }
-.loginContainer button:nth-child(1):hover {
+.loginContainerMobile a:nth-child(2) {
+  background-color: white;
+  color: black;
+}
+.loginContainer button:nth-child(1):hover,
+.loginContainerMobile a:nth-child(1):hover {
   background-color: $subheader;
 }
-.loginContainer button:nth-child(2):hover {
+.loginContainer button:nth-child(2):hover,
+.loginContainerMobile a:nth-child(2):hover {
   background-color: $header-footer;
   color: white;
 }
 .loginContainer button:nth-child(1):hover,
-.loginContainer button:nth-child(2):hover {
+.loginContainer button:nth-child(2):hover,
+.loginContainerMobile a:nth-child(1):hover,
+.loginContainerMobile a:nth-child(2):hover {
   transition: background-color 0.4s;
   box-shadow: 0px 1px 5px black;
 }
 .rightHeaderContainer {
   display: flex;
 }
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
+  .logoContainer {
+    font-size: clamp(1.3rem, 1.7rem, 3rem);
+    margin-right: 0.5rem;
+  }
+  .headerBanner {
+    margin-right: auto;
+  }
   .subHeaderContainer {
     display: none;
   }
-  .searchBarContainer,
-  .searchBtn {
-    display: none;
-  }
   .headerContainer {
-    padding: 0 1rem 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    padding: 0 0.5rem 0 0.5rem;
   }
-  .loginContainer button {
-    padding: 0.5rem 0.8rem;
+  .loginContainerMobile a {
+    font-size: clamp(0.6rem, 0.8rem, 1rem);
   }
+}
+@media screen and (max-width: 344px) {
+  .headerContainer {
+    padding: 0;
+  }
+  .menuContainer {
+    margin-right: 0;
+  }
+  .logoContainer {
+    margin-right: 0;
+  }
+  .searchBarContainerMobile {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
 }
 @keyframes fadeInList {
   0% {
