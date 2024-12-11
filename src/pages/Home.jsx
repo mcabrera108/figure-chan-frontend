@@ -8,7 +8,7 @@ import TrendingGallery from "../features/trending_gallery/TrendingGallery";
 import announceData from "../utils/testdata/announcementData";
 import Boards from "../features/boards/Boards";
 import RecommendedItems from "../features/recommended_items/RecommendedItems";
-import SideWidget from "../components/ui/SideWidget";
+import TrendingItems from "../features/trending_items/TrendingItems";
 function Home() {
   return (
     <div className={homestyle.mainContainer}>
@@ -24,7 +24,7 @@ function Home() {
             <SellerAds />
           </div>
           <div className={homestyle.homeSideWidgetContainer}>
-            <SideWidget />
+            <TrendingItems />
           </div>
         </div>
       </div>

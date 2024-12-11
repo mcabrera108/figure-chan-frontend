@@ -5,7 +5,7 @@ function Announcements({ announceData }) {
   return (
     <div className={style.announcementContainer}>
       {announceData[announceData.length - 1].announceTitle}
-      <Link to={announceData[announceData.length - 1].url}>Read More</Link>
+      <Link to={announceData[announceData.length - 1].url}> Read More</Link>
     </div>
   );
 }

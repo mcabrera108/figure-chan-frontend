@@ -10,7 +10,9 @@
   --layout-sub-hover-color: #911d4d;
   --layout-sidenav-hover-color: #6d0832;
   --subheader-options-mobile: #5e0228;
+  --layout-sub-sidenav-hover-color: #86234c;
   --layout-announce-bg-color: #ccccff;
+  --layout-widget-bg-color: rgb(46, 46, 46);
   --font-formal-family: "Helvetica", "Roboto";
   --font-component-header-family: "Roboto", "Avenir";
   --main-font-color: white;

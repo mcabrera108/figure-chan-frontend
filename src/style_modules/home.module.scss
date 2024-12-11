@@ -30,7 +30,10 @@
 }
 .homeSideWidgetContainer {
   width: 30%;
-  margin: 0 0.7rem 0 0.7rem;
+  margin: 0 0.7rem 0 1.2rem;
+  border-radius: 5px;
+  background-color: var(--layout-widget-bg-color);
+  margin-bottom: 2em;
 }
 /*Trending Photo Layout Styling*/
 
@@ -114,12 +117,14 @@
   transition: transform 0.4s;
 }
 /*Widget Styling*/
-.widgetContainer {
+.widgetContainer,
+.sideWidgetContainer {
   border-radius: 5px;
-  background-color: rgb(46, 46, 46);
+  background-color: var(--layout-widget-bg-color);
   margin-bottom: 2em;
 }
-.widgetHeaderContainer {
+.widgetHeaderContainer,
+.sideWidgetHeaderContainer {
   border-radius: 5px 5px 0 0;
   border-bottom: 1px solid rgb(190, 190, 190);
   display: flex;
@@ -173,16 +178,23 @@
 }
 /*Shared Widget Styling*/
 .classifiedContainer,
-.boardsContainer {
+.boardsContainer,
+.topWidgetContainer {
   color: var(--sub-font-color);
   font-family: var(--font-formal-family);
   margin: 1rem 0;
   border-radius: 5px;
 }
 /*Sale Widget Styling*/
-.classifiedContainer {
+.classifiedContainer,
+.topWidgetContainer {
   background-color: var(--home-inner-container-bg-color);
-  padding: 0.8rem 0.5rem;
+  padding: 0.8em 0.5em;
+}
+.topWidgetContainer {
+  display: flex;
+  margin: 0.5em 0.5em;
+  padding: 0.3em 0.3em;
 }
 .watching {
   color: gray;
@@ -211,6 +223,7 @@
 }
 .adDescContainer {
   width: 100%;
+  padding-right: 0.5rem;
 }
 .adDescContainer div {
   margin-bottom: 0.6rem;
@@ -241,7 +254,11 @@
   color: rgb(228, 57, 57);
 }
 .username {
+  cursor: pointer;
   font-weight: 600;
+}
+.username:hover {
+  text-decoration: underline;
 }
 .adTitle {
   margin-bottom: 0.6em;
@@ -279,6 +296,7 @@
   top: 115px;
   left: 62px;
 }
+/*Top Widget Styling*/
 
 /*Boards Preview Styling*/
 .boardDescContainer div {
@@ -297,15 +315,34 @@
   color: var(--layout-text-color);
   cursor: pointer;
 }
+.topTitle {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+.topTitle:hover {
+  text-decoration: underline;
+}
 .boardsWrapper {
   display: flex;
 }
-.boardsThumbnail {
+.boardsThumbnail,
+.topPreview {
   margin-right: 1rem;
 }
 .boardsThumbnail img {
   object-fit: cover;
   border-radius: 5px;
+}
+.topPreview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topPreview img {
+  object-fit: cover;
 }
 .boardsContainer:nth-child(odd) {
   background-color: var(--home-inner-container-bg-color);

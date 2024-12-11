@@ -64,7 +64,7 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   margin-top: 1rem;
   width: 80%;
   background-color: $announcement;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   font-family: var(--font-formal-family);
 }
@@ -281,25 +281,29 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   background-color: $subheader;
   overflow-x: hidden;
   overflow-y: auto;
+  animation: slide-in 0.7s;
 }
 .overlay {
   display: block;
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   top: 100%;
-  width: 30%;
+  width: 100%;
   min-height: 100vh;
   background-color: rgb(0, 0, 0, 0.5);
-  left: 70%;
+  left: 0;
 }
 .homeSideNavWrapper {
   position: relative;
+}
+.homeSideNavWrapper ul {
+  list-style: none;
 }
 .navOption,
 .sideNavSubOption {
   display: flex;
   justify-content: space-between;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: white;
   font-weight: 500;
   font-family: var(--font-formal-family);
@@ -312,7 +316,15 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   background-color: $subheader-options-mobile;
 }
 .sideNavSubOption:hover {
-  background-color: $subheader-mobile;
+  background-color: var(--layout-sub-sidenav-hover-color);
+}
+@keyframes slide-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -334,6 +346,9 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   }
   .loginContainerMobile a {
     font-size: clamp(0.6rem, 0.8rem, 1rem);
+  }
+  .announcementContainer {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 344px) {
