@@ -28,7 +28,7 @@
 .mainContentContainer {
   width: 70%;
 }
-.homeSideNavContainer {
+.homeSideWidgetContainer {
   width: 30%;
   margin: 0 0.7rem 0 0.7rem;
 }
@@ -276,7 +276,6 @@
 }
 .itemImg .flagImg {
   position: absolute;
-  z-index: 999;
   top: 115px;
   left: 62px;
 }
@@ -355,7 +354,7 @@
   .mainContentContainer {
     width: 100%;
   }
-  .homeSideNavContainer {
+  .homeSideWidgetContainer {
     display: none;
   }
   .homeWrapper {

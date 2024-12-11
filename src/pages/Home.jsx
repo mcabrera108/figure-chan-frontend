@@ -1,7 +1,6 @@
 /*Styling files */
 import homestyle from "../style_modules/home.module.scss";
 /*React Components*/
-import SideNav from "../components/ui/SideNav";
 import Announcements from "../features/announcements/Announcements";
 import SellerAds from "../features/seller_ads/SellerAds";
 import TrendingGallery from "../features/trending_gallery/TrendingGallery";
@@ -9,6 +8,7 @@ import TrendingGallery from "../features/trending_gallery/TrendingGallery";
 import announceData from "../utils/testdata/announcementData";
 import Boards from "../features/boards/Boards";
 import RecommendedItems from "../features/recommended_items/RecommendedItems";
+import SideWidget from "../components/ui/SideWidget";
 function Home() {
   return (
     <div className={homestyle.mainContainer}>
@@ -23,8 +23,8 @@ function Home() {
             <RecommendedItems />
             <SellerAds />
           </div>
-          <div className={homestyle.homeSideNavContainer}>
-            <SideNav />
+          <div className={homestyle.homeSideWidgetContainer}>
+            <SideWidget />
           </div>
         </div>
       </div>

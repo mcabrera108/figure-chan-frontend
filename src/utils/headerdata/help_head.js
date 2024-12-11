@@ -3,12 +3,6 @@ const help_head = {
   navTitle: "Help",
   navOptions: [
     {
-      /*User would be redirected to database/search if user attempts to modify durl to database/ */
-      navOptTitle: "About",
-      navOptUrl: "",
-      id: uuid(),
-    },
-    {
       navOptTitle: "FAQ",
       navOptUrl: "",
       id: uuid(),

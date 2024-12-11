@@ -2,7 +2,8 @@ $header-footer: var(--layout-bg-color);
 $subheader: var(--layout-sub-drk-bg-color);
 $announcement: var(--layout-announce-bg-color);
 $layout-font-color: white;
-$subheader-mobile: var(--layout-sub-drk-bg-color);
+$subheader-mobile: var(--layout-sidenav-hover-color);
+$subheader-options-mobile: var(--subheader-options-mobile);
 
 /*General Header and Footer Styling Values*/
 .headerContainer {
@@ -152,7 +153,7 @@ $subheader-mobile: var(--layout-sub-drk-bg-color);
   top: 100%;
   left: 0;
   position: absolute;
-  z-index: 10002;
+  z-index: 997;
   padding: 0.5em 0.5em;
   background-color: $subheader-mobile;
 }
@@ -214,7 +215,7 @@ $subheader-mobile: var(--layout-sub-drk-bg-color);
   border: none;
   bottom: 5%;
   right: 5%;
-  z-index: 1000;
+  z-index: 998;
   cursor: pointer;
   line-height: 30px;
 }
@@ -268,6 +269,52 @@ $subheader-mobile: var(--layout-sub-drk-bg-color);
 .rightHeaderContainer {
   display: flex;
 }
+
+/*Sidenav Styling*/
+.homeSideNavContainer {
+  position: absolute;
+  z-index: 999;
+  top: 100%;
+  width: 70%;
+  left: 0;
+  min-height: 100vh;
+  background-color: $subheader;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.overlay {
+  display: block;
+  position: absolute;
+  z-index: 999;
+  top: 100%;
+  width: 30%;
+  min-height: 100vh;
+  background-color: rgb(0, 0, 0, 0.5);
+  left: 70%;
+}
+.homeSideNavWrapper {
+  position: relative;
+}
+.navOption,
+.sideNavSubOption {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 500;
+  font-family: var(--font-formal-family);
+  padding: 1rem 1rem 1rem 1rem;
+}
+.navOption:hover {
+  background-color: $subheader-mobile;
+}
+.sideNavSubOption {
+  background-color: $subheader-options-mobile;
+}
+.sideNavSubOption:hover {
+  background-color: $subheader-mobile;
+}
+
 @media screen and (max-width: 767px) {
   .logoContainer {
     font-size: clamp(1.3rem, 1.7rem, 3rem);
@@ -282,7 +329,7 @@ $subheader-mobile: var(--layout-sub-drk-bg-color);
   .headerContainer {
     position: sticky;
     top: 0;
-    z-index: 1001;
+    z-index: 999;
     padding: 0 0.5rem 0 0.5rem;
   }
   .loginContainerMobile a {

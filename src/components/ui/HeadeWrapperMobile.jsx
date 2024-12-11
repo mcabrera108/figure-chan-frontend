@@ -1,14 +1,17 @@
 import style from "../../style_modules/layout.module.scss";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
-function HeaderWrapperMobile({ searchVisible, setSearchVisible }) {
-  const [toggleMenu, setToggleMenu] = useState(false);
-
+function HeaderWrapperMobile({
+  searchVisible,
+  setSearchVisible,
+  setSideNavVisible,
+  toggleMenu,
+  setToggleMenu,
+}) {
   return (
     <div className={style.headerWrapper}>
       <div className={style.menuContainer}>
@@ -17,6 +20,7 @@ function HeaderWrapperMobile({ searchVisible, setSearchVisible }) {
             className={style.menu}
             onClick={() => {
               setToggleMenu(!toggleMenu);
+              setSideNavVisible(false);
             }}
           >
             <FontAwesomeIcon icon={faXmark} size="xl" color="white" />
@@ -26,6 +30,7 @@ function HeaderWrapperMobile({ searchVisible, setSearchVisible }) {
             className={style.menu}
             onClick={() => {
               setToggleMenu(!toggleMenu);
+              setSideNavVisible(true);
             }}
           >
             <FontAwesomeIcon icon={faBars} size="xl" color="white" />
@@ -59,5 +64,9 @@ function HeaderWrapperMobile({ searchVisible, setSearchVisible }) {
 HeaderWrapperMobile.propTypes = {
   searchVisible: PropTypes.bool,
   setSearchVisible: PropTypes.func,
+  sideNavVisible: PropTypes.bool,
+  setSideNavVisible: PropTypes.func,
+  toggleMenu: PropTypes.bool,
+  setToggleMenu: PropTypes.func,
 };
 export default HeaderWrapperMobile;
