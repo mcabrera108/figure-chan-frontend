@@ -14,7 +14,7 @@ function TrendingItems() {
             color="white"
             className={homestyle.iconWidget}
           />
-          <h3>Top 10 This Week</h3>
+          <h3>Top 10</h3>
         </div>
         <div className={homestyle.widgetHeaderRight}>
           <Link className={homestyle.widgetMoreBtn} to={"/"}>
