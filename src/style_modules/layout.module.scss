@@ -23,8 +23,8 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   font-size: clamp(2rem, 1.5rem, 3rem);
   text-decoration: none;
   font-weight: 600;
-  color: $layout-font-color;
   margin-right: auto;
+  color: $layout-font-color;
 }
 .menuContainer {
   height: 25px;
@@ -76,6 +76,9 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   background-color: var(--layout-sub-hover-color);
   transition: background-color 0.5s;
 }
+.navListOpt {
+  font-size: 18px;
+}
 .navbar ul li a {
   cursor: pointer;
   display: inline-block;
@@ -91,9 +94,8 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 8rem;
+  top: 6.7em;
   width: 250px;
-  border-radius: 5px;
   animation: fadeInList 0.3s;
   z-index: 999;
 }
@@ -104,14 +106,19 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   background-color: rgb(99, 99, 99);
 }
 .navOpt li a {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   width: 100%;
 }
 /*Search Bar Container Styling Values*/
 .searchBarContainer {
   display: flex;
   align-items: center;
+  max-width: 700px;
+  width: calc(100% - 600px);
   margin-right: auto;
+}
+.banner {
+  width: 150px;
 }
 .searchBarContainer input {
   width: 100%;
@@ -127,6 +134,7 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   font-size: 1rem;
   color: rgb(228, 228, 228);
   font-weight: 600;
+  width: calc(100% - 27px);
 }
 .searchBtn {
   border: none;
@@ -366,6 +374,9 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   }
 }
 @media only screen and (max-width: 1024px) {
+  .subHeaderContainer {
+    display: none;
+  }
 }
 @keyframes fadeInList {
   0% {

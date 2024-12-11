@@ -10,15 +10,15 @@ function HeaderWrapperDesk() {
       <Link className={style.logoContainer} to={"/"}>
         Figure-Chan
       </Link>
+      <span className={style.banner}>Figure Chan Banner</span>
       {/*Include Form Here for Call to an API */}
       <div className={style.searchBarContainer}>
-        <span>Figure Chan Banner</span>
         <input
           type="text"
           className={style.searchInput}
           placeholder="Search..."
-          size={60}
           value={searchInput}
+          size={50}
           onChange={(e) => {
             setSearchInput(e.target.value);
           }}

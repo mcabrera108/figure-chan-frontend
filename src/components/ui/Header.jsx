@@ -7,7 +7,7 @@ import SideNav from "./SideNav";
 import { useState } from "react";
 function Header() {
   const isMobileDevice = useMediaQuery({
-    maxWidth: 767,
+    maxWidth: 1024,
   });
   const [searchVisible, setSearchVisible] = useState(false);
   const [sideNavVisible, setSideNavVisible] = useState(false);
