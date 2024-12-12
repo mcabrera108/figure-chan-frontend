@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import adData from "../../utils/testdata/adData";
-import TopItem from "../trending_items/TopItem";
+import NewsItem from "./NewsItem";
 function News() {
   return (
     <section className={homestyle.sideWidgetContainer}>
@@ -28,19 +28,19 @@ function News() {
           <h2>Popular Articles</h2>
         </div>
         {adData.map((top) => {
-          return <TopItem top={top} key={top.id} />;
+          return <NewsItem top={top} key={top.id} />;
         })}
         {adData.map((top) => {
-          return <TopItem top={top} key={top.id} />;
+          return <NewsItem top={top} key={top.id} />;
         })}
         <div className={homestyle.widgetSubHeaderTitle}>
           <h2>Newest Articles</h2>
         </div>
         {adData.map((top) => {
-          return <TopItem top={top} key={top.id} />;
+          return <NewsItem top={top} key={top.id} />;
         })}
         {adData.map((top) => {
-          return <TopItem top={top} key={top.id} />;
+          return <NewsItem top={top} key={top.id} />;
         })}
       </div>
     </section>
