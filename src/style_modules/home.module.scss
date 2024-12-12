@@ -32,7 +32,8 @@
   width: 30%;
   margin: 0 0.7rem 0 1.2rem;
   border-radius: 5px;
-  background-color: var(--layout-widget-bg-color);
+  /*background-color: var(--layout-widget-bg-color);*/
+  background-color: var(--home-inner-bg-color);
   margin-bottom: 2em;
 }
 /*Trending Photo Layout Styling*/
@@ -122,9 +123,11 @@
   border-radius: 5px;
   background-color: var(--layout-widget-bg-color);
   margin-bottom: 2em;
+  padding-bottom: 0.5rem;
 }
 .widgetHeaderContainer,
-.sideWidgetHeaderContainer {
+.sideWidgetHeaderContainer,
+.widgetSubHeaderTitle {
   border-radius: 5px 5px 0 0;
   border-bottom: 1px solid rgb(190, 190, 190);
   display: flex;
@@ -132,9 +135,14 @@
   justify-content: space-between;
   padding: 0.5rem 1rem;
   font-family: var(--font-component-header-family);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 100;
   color: var(--main-font-color);
+}
+.widgetSubHeaderTitle {
+  font-size: 0.7rem;
+  border-bottom: 1px solid rgb(88, 88, 88);
+  margin: 0.2rem 1rem;
 }
 /*Widget Header Icons*/
 .iconWidget {
@@ -244,7 +252,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.2em 0.4em;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .adPrice {
   font-weight: 600;
@@ -266,7 +274,7 @@
 }
 .adTitle,
 .adPrice {
-  font-size: clamp(0.9rem, 1.1rem, 1.2rem);
+  font-size: clamp(0.9rem, 1.05rem, 1.2rem);
 }
 .adTitle:hover {
   text-decoration: underline;

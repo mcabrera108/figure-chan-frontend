@@ -9,6 +9,7 @@ import announceData from "../utils/testdata/announcementData";
 import Boards from "../features/boards/Boards";
 import RecommendedItems from "../features/recommended_items/RecommendedItems";
 import TrendingItems from "../features/trending_items/TrendingItems";
+import News from "../features/news/News";
 function Home() {
   return (
     <div className={homestyle.mainContainer}>
@@ -25,6 +26,7 @@ function Home() {
           </div>
           <div className={homestyle.homeSideWidgetContainer}>
             <TrendingItems />
+            <News />
           </div>
         </div>
       </div>

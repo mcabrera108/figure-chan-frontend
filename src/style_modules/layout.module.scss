@@ -77,7 +77,7 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   transition: background-color 0.5s;
 }
 .navListOpt {
-  font-size: 18px;
+  font-size: 17px;
 }
 .navbar ul li a {
   cursor: pointer;
@@ -94,8 +94,8 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 6.7em;
-  width: 250px;
+  top: 7em;
+  width: 200px;
   animation: fadeInList 0.3s;
   z-index: 999;
 }
@@ -106,7 +106,7 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   background-color: rgb(99, 99, 99);
 }
 .navOpt li a {
-  font-size: 1.1rem;
+  font-size: 1rem;
   width: 100%;
 }
 /*Search Bar Container Styling Values*/
@@ -242,7 +242,7 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   border-radius: 5px;
   outline: none;
   border: none;
-  font-size: clamp(0.7rem, 1rem, 2rem);
+  font-size: clamp(0.6rem, 0.9rem, 1.5rem);
   font-weight: 500;
   letter-spacing: 0.1rem;
 }

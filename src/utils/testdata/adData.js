@@ -18,7 +18,8 @@ When using a real API. Values will be modified for component and js file
 let date = "Aug 29, 2024";
 const adData = [
   {
-    adTitle: "A-Z: - [D] - 1/7 (Myethos)",
+    adTitle: `
+Atelier Totori ~Arland no Renkinjutsushi 2~ - Chim (Female) - Totooria Helmold - Nendoroid (#159) (Good Smile Company)`,
     currencyType: "",
     adPrice: "A-Z: [S] 1/7 Complete Figure",
     adTags: [
@@ -40,7 +41,7 @@ const adData = [
     id: uuid(),
   },
   {
-    adTitle: "A-Z: [S] 1/7 Complete Figure",
+    adTitle: `Fate/Apocrypha - Jeanne d'Arc - Mordred - 1/7 - Type-Moon Racing ver. (Plusone, Stronger)`,
     currencyType: "$",
     adPrice: "90.25",
     adTags: [
