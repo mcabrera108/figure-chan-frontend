@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import gallery_head from "../../utils/headerdata/gallery_head";
 import shop_head from "../../utils/headerdata/shop_head";
 import help_head from "../../utils/headerdata/help_head";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function SubHeader() {
   const [dbDropdown, setDBDropdown] = useState(false);
   const [commDropdown, setCommDropdown] = useState(false);
@@ -84,6 +86,11 @@ function SubHeader() {
             </li>
           </ul>
         </nav>
+      </div>
+      <div className={style.subHeaderRightContainer}>
+        <button>
+          <FontAwesomeIcon icon={faGear} size="2x" color="white" />
+        </button>
       </div>
     </div>
   );

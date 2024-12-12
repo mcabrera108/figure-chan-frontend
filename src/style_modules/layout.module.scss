@@ -55,9 +55,23 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   font-family: var(--font-formal-family);
 }
 .subHeaderContainer {
+  display: flex;
+  align-items: center;
   width: 100%;
   background-color: $subheader;
   font-size: 1.5rem;
+}
+.subHeaderLeftContainer {
+  margin-right: auto;
+}
+.subHeaderRightContainer {
+  margin-right: 1rem;
+}
+.subHeaderRightContainer button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 .announcementContainer {
   border-radius: 10px;
@@ -293,9 +307,8 @@ $subheader-options-mobile: var(--subheader-options-mobile);
 }
 .overlay {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: 998;
-  top: 100%;
   width: 100%;
   min-height: 100vh;
   background-color: rgb(0, 0, 0, 0.5);
