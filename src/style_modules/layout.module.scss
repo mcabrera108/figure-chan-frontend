@@ -303,7 +303,7 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   background-color: $subheader;
   overflow-x: hidden;
   overflow-y: auto;
-  animation: slide-in 0.7s;
+  animation: slide-in 0.7s linear;
 }
 .overlay {
   display: block;
