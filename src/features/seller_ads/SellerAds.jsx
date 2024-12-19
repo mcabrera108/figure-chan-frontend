@@ -4,10 +4,13 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import SalePreview from "./SalePreview";
 import adData from "../../utils/testdata/adData";
+import WidgetLayout from "../../components/ui/Widget/WidgetLayout";
+import WidgetHeader from "../../components/ui/Widget/WidgetHeader";
+import WidgetBody from "../../components/ui/Widget/WidgetBody";
 function SellerAds() {
   return (
-    <section className={homestyle.widgetContainer}>
-      <div className={homestyle.widgetHeaderContainer}>
+    <WidgetLayout>
+      <WidgetHeader>
         <div className={homestyle.widgetHeaderLeft}>
           <FontAwesomeIcon
             icon={faTag}
@@ -22,13 +25,13 @@ function SellerAds() {
             View More
           </Link>
         </div>
-      </div>
-      <div className={homestyle.widgetBodyContainer}>
+      </WidgetHeader>
+      <WidgetBody>
         {adData.map((ad) => {
           return <SalePreview adInfo={ad} key={ad.id} />;
         })}
-      </div>
-    </section>
+      </WidgetBody>
+    </WidgetLayout>
   );
 }
 export default SellerAds;

@@ -1,13 +1,13 @@
-import homeStyle from "../../style_modules/layout.module.scss";
+import homeStyle from "../../../style_modules/layout.module.scss";
 import PropTypes from "prop-types";
 import SideNavOption from "./SideNavOpt";
-import community_head from "../../utils/headerdata/community_head";
-import database_head from "../../utils/headerdata/database_head";
-import gallery_head from "../../utils/headerdata/gallery_head";
-import help_head from "../../utils/headerdata/help_head";
-import shop_head from "../../utils/headerdata/shop_head";
+import community_head from "../../../utils/headerdata/community_head";
+import database_head from "../../../utils/headerdata/database_head";
+import gallery_head from "../../../utils/headerdata/gallery_head";
+import help_head from "../../../utils/headerdata/help_head";
+import shop_head from "../../../utils/headerdata/shop_head";
 import { useState } from "react";
-import Overlay from "./Overlay";
+import Overlay from "../Overlay";
 function SideNav({ sideNavVisible }) {
   const [sidenavOptions, setSideNavOptions] = useState(-1);
   return (

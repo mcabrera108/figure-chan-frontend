@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import style from "../../style_modules/layout.module.scss";
+import style from "../../../style_modules/layout.module.scss";
 function NavOpt({ navObj }) {
   return (
     <>

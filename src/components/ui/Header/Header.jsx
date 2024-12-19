@@ -1,9 +1,9 @@
-import style from "../../style_modules/layout.module.scss";
+import style from "../../../style_modules/layout.module.scss";
 import { useMediaQuery } from "react-responsive";
 import HeaderWrapperDesk from "./HeaderWrapperDesk";
 import HeaderWrapperMobile from "./HeadeWrapperMobile";
-import SearchBarMobile from "../../features/search_bar/SearchBarMobile";
-import SideNav from "./SideNav";
+import SearchBarMobile from "../../../features/search_bar/SearchBarMobile";
+import SideNav from "../SideNav/SideNav";
 import { useState } from "react";
 function Header() {
   const isMobileDevice = useMediaQuery({

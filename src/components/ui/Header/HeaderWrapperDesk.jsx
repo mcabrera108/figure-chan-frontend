@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import style from "../../style_modules/layout.module.scss";
+import style from "../../../style_modules/layout.module.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 function HeaderWrapperDesk() {

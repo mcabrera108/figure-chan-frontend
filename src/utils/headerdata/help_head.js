@@ -3,6 +3,11 @@ const help_head = {
   navTitle: "Help",
   navOptions: [
     {
+      navOptTitle: "Rules and Guidelines",
+      navOptUrl: "",
+      id: uuid(),
+    },
+    {
       navOptTitle: "FAQ",
       navOptUrl: "",
       id: uuid(),

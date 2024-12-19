@@ -1,4 +1,4 @@
-import style from "../../style_modules/layout.module.scss";
+import style from "../../../style_modules/layout.module.scss";
 import { Link } from "react-router-dom";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";

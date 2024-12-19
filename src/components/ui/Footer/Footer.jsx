@@ -1,4 +1,4 @@
-import style from "../../style_modules/layout.module.scss";
+import style from "../../../style_modules/layout.module.scss";
 function Footer() {
   return (
     <footer className={style.footerContainer}>

@@ -294,25 +294,34 @@ $subheader-options-mobile: var(--subheader-options-mobile);
 
 /*Sidenav Styling*/
 .homeSideNavContainer {
-  position: absolute;
+  position: fixed;
   z-index: 999;
-  top: 100%;
+  top: 0%;
   width: 70%;
   left: 0;
+  bottom: 0;
   min-height: 100vh;
   background-color: $subheader;
   overflow-x: hidden;
   overflow-y: auto;
-  animation: slide-in 0.7s linear;
+  animation: slide-in 0.3s linear;
 }
 .overlay {
   display: block;
   position: fixed;
   z-index: 998;
+  top: 0%;
   width: 100%;
   min-height: 100vh;
   background-color: rgb(0, 0, 0, 0.5);
   left: 0;
+  bottom: 0;
+}
+.xIcon {
+  position: fixed;
+  z-index: 998;
+  top: 5%;
+  right: 5%;
 }
 .homeSideNavWrapper {
   position: relative;

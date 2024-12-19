@@ -4,10 +4,13 @@ import { faComments } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import BoardPreview from "./BoardPreview";
 import boardData from "../../utils/testdata/boardData";
+import WidgetLayout from "../../components/ui/Widget/WidgetLayout";
+import WidgetHeader from "../../components/ui/Widget/WidgetHeader";
+import WidgetBody from "../../components/ui/Widget/WidgetBody";
 function Boards() {
   return (
-    <section className={homestyle.widgetContainer}>
-      <div className={homestyle.widgetHeaderContainer}>
+    <WidgetLayout>
+      <WidgetHeader>
         <div className={homestyle.widgetHeaderLeft}>
           <FontAwesomeIcon
             icon={faComments}
@@ -22,13 +25,13 @@ function Boards() {
             View More
           </Link>
         </div>
-      </div>
-      <div className={homestyle.widgetBodyContainer}>
+      </WidgetHeader>
+      <WidgetBody>
         {boardData.map((board) => {
           return <BoardPreview boardData={board} key={board.id} />;
         })}
-      </div>
-    </section>
+      </WidgetBody>
+    </WidgetLayout>
   );
 }
 export default Boards;

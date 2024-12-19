@@ -1,12 +1,12 @@
 import { useState } from "react";
-import style from "../../style_modules/layout.module.scss";
-import database_head from "../../utils/headerdata/database_head";
-import community_head from "../../utils/headerdata/community_head";
+import style from "../../../style_modules/layout.module.scss";
+import database_head from "../../../utils/headerdata/database_head";
+import community_head from "../../../utils/headerdata/community_head";
 import NavOpt from "./NavOpt";
 import { Link } from "react-router-dom";
-import gallery_head from "../../utils/headerdata/gallery_head";
-import shop_head from "../../utils/headerdata/shop_head";
-import help_head from "../../utils/headerdata/help_head";
+import gallery_head from "../../../utils/headerdata/gallery_head";
+import shop_head from "../../../utils/headerdata/shop_head";
+import help_head from "../../../utils/headerdata/help_head";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function SubHeader() {

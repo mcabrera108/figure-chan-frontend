@@ -3,11 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGift } from "@fortawesome/free-solid-svg-icons";
 import itemsForYouData from "../../utils/testdata/itemsForYouData";
 import ItemPreview from "./ItemPreview";
+import WidgetLayout from "../../components/ui/Widget/WidgetLayout";
+import WidgetHeader from "../../components/ui/Widget/WidgetHeader";
+import WidgetBody from "../../components/ui/Widget/WidgetBody";
 
 function RecommendedItems() {
   return (
-    <section className={homestyle.widgetContainer}>
-      <div className={homestyle.widgetHeaderContainer}>
+    <WidgetLayout>
+      <WidgetHeader>
         <div className={homestyle.widgetHeaderLeft}>
           <FontAwesomeIcon
             icon={faGift}
@@ -24,15 +27,15 @@ function RecommendedItems() {
             <option>Media</option>
           </select>
         </div>
-      </div>
-      <div className={homestyle.widgetBodyContainer}>
+      </WidgetHeader>
+      <WidgetBody>
         <div className={homestyle.recommendedWrapper}>
           {itemsForYouData.map((item) => {
             return <ItemPreview key={item.id} itemInfo={item} />;
           })}
         </div>
-      </div>
-    </section>
+      </WidgetBody>
+    </WidgetLayout>
   );
 }
 export default RecommendedItems;

@@ -1,4 +1,4 @@
-import homestyle from "../../style_modules/layout.module.scss";
+import homestyle from "../../../style_modules/layout.module.scss";
 import PropTypes from "prop-types";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
