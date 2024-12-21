@@ -274,7 +274,7 @@
 }
 .adTitle,
 .adPrice {
-  font-size: clamp(0.9rem, 1.05rem, 1.2rem);
+  font-size: 18px;
 }
 .adTitle:hover {
   text-decoration: underline;
@@ -306,7 +306,7 @@
 }
 /*Top Widget Styling*/
 .widgetHeaderLeft span {
-  font-size: 1.3rem;
+  font-size: 24px;
   font-family: var(--font-formal-family);
   font-weight: 600;
 }
@@ -323,7 +323,7 @@
   text-decoration: underline;
 }
 .boardTitle {
-  font-size: 1.1rem;
+  font-size: 16px;
   font-weight: 600;
   color: var(--layout-text-color);
   cursor: pointer;
@@ -331,7 +331,7 @@
 .topTitle {
   display: flex;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: 600;
   color: white;
   cursor: pointer;
