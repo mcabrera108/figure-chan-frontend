@@ -14,7 +14,7 @@ function TrendingItems() {
             color="white"
             className={homestyle.iconWidget}
           />
-          <h3>Top 10</h3>
+          <span>Top 10</span>
         </div>
         <div className={homestyle.widgetHeaderRight}>
           <select className={homestyle.widgetSelectItems}>

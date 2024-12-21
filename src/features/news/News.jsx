@@ -15,7 +15,7 @@ function News() {
             color="white"
             className={homestyle.iconWidget}
           />
-          <h3>News</h3>
+          <span>News</span>
         </div>
         <div className={homestyle.widgetHeaderRight}>
           <Link className={homestyle.widgetMoreBtn} to={"/"}>

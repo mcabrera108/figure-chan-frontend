@@ -18,7 +18,7 @@ function SellerAds() {
             color="white"
             className={homestyle.iconWidget}
           />
-          <h3>Ads For You!</h3>
+          <span>Ads For You!</span>
         </div>
         <div className={homestyle.widgetHeaderRight}>
           <Link className={homestyle.widgetMoreBtn} to={"/"}>

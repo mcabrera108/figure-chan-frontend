@@ -305,6 +305,11 @@
   left: 62px;
 }
 /*Top Widget Styling*/
+.widgetHeaderLeft span {
+  font-size: 1.5rem;
+  font-family: var(--font-formal-family);
+  font-weight: 600;
+}
 
 /*Boards Preview Styling*/
 .boardDescContainer div {
@@ -334,6 +339,7 @@
 }
 .topTitle:hover {
   text-decoration: underline;
+  color: var(--layout-bg-color);
 }
 .boardsWrapper {
   display: flex;
@@ -425,7 +431,7 @@
   .boardDescContainer div {
     font-size: 0.8rem;
   }
-  .widgetHeaderLeft h3 {
+  .widgetHeaderLeft span {
     font-size: 1.1rem;
   }
   .boardDescContainer div {

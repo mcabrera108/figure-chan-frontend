@@ -1,6 +1,6 @@
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import style from "../../style_modules/layout.module.scss";
+import style from "../../../style_modules/layout.module.scss";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 PropTypes;

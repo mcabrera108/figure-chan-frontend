@@ -36,7 +36,7 @@ function TrendingGallery() {
             color="white"
             className={homestyle.iconWidget}
           />
-          <h3>Trending Posts</h3>
+          <span>Trending Posts</span>
         </div>
       </div>
       <div className={homestyle.widgetBodyContainer}>{getLayoutType}</div>

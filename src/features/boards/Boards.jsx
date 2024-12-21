@@ -18,7 +18,7 @@ function Boards() {
             color="white"
             className={homestyle.iconWidget}
           />
-          <h3>Boards</h3>
+          <span>Boards</span>
         </div>
         <div className={homestyle.widgetHeaderRight}>
           <Link className={homestyle.widgetMoreBtn} to={"/"}>

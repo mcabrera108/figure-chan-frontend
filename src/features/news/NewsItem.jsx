@@ -6,7 +6,9 @@ function NewsItem({ top }) {
       <div className={homestyle.topPreview}>
         <img src={top.adImgURL.img} alt="" width={64} height={64} />
       </div>
-      <div className={homestyle.topTitle}>{top.adTitle}</div>
+      <div>
+        <span className={homestyle.topTitle}>{top.adTitle}</span>
+      </div>
     </div>
   );
 }

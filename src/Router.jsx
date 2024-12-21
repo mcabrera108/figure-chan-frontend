@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
+import AdvanceSearch from "./pages/AdvanceSearch";
+import Item from "./pages/Item";
 
 function Router() {
   const router = createBrowserRouter([
@@ -13,6 +15,20 @@ function Router() {
         {
           path: "/",
           element: <Home />,
+        },
+      ],
+    },
+    {
+      path: "/search",
+      element: <AdvanceSearch />,
+    },
+    {
+      path: "/item/:id",
+      element: <App />,
+      children: [
+        {
+          path: "/item/:id",
+          element: <Item />,
         },
       ],
     },

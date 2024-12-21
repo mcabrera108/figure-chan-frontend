@@ -317,6 +317,20 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   left: 0;
   bottom: 0;
 }
+.loader {
+  border: 1rem solid #f3fef3;
+  border-radius: 50%;
+  border-top: 1rem solid var(--layout-bg-color);
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+.loaderLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
 .xIcon {
   position: fixed;
   z-index: 998;
@@ -393,6 +407,15 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   }
   .searchBarContainerMobile {
     padding: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 @media only screen and (max-width: 1024px) {
