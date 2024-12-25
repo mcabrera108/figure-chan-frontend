@@ -156,10 +156,10 @@
 .widgetMoreBtn {
   border-radius: 5px;
   text-decoration: none;
-  background-color: rgb(27, 27, 27);
+  background-color: var(--home-inner-bg-color);
   color: white;
   font-weight: 600;
-  font-size: clamp(0.5rem, 1rem, 1.5rem);
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   transition: background-color 0.4s;
 }
@@ -169,14 +169,14 @@
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 0.5rem;
-  background-color: rgb(27, 27, 27);
+  background-color: var(--home-inner-bg-color);
   color: white;
   border: none;
-  font-size: clamp(0.5rem, 1.1rem, 1.5rem);
+  font-size: 1.1rem;
   border-right: 10px solid transparent;
 }
 .widgetSelectItems option {
-  font-size: clamp(0.5rem, 1.1rem, 1.5rem);
+  font-size: 1.1rem;
 }
 .widgetMoreBtn:hover {
   background-color: var(--layout-bg-color);
@@ -246,7 +246,7 @@
   text-decoration: none;
   padding: 0.2rem 0.3rem;
   border-radius: 7px;
-  font-size: clamp(0.6rem, 0.8rem, 0.9rem);
+  font-size: 0.8rem;
 }
 .sellerContainer {
   display: flex;
@@ -274,7 +274,7 @@
 }
 .adTitle,
 .adPrice {
-  font-size: 18px;
+  font-size: 1rem;
 }
 .adTitle:hover {
   text-decoration: underline;
@@ -306,7 +306,7 @@
 }
 /*Top Widget Styling*/
 .widgetHeaderLeft span {
-  font-size: 24px;
+  font-size: 1.2rem;
   font-family: var(--font-formal-family);
   font-weight: 600;
 }
@@ -323,7 +323,7 @@
   text-decoration: underline;
 }
 .boardTitle {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--layout-text-color);
   cursor: pointer;
@@ -331,7 +331,7 @@
 .topTitle {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 600;
   color: white;
   cursor: pointer;
@@ -422,7 +422,7 @@
     padding: 0.5rem 0.5rem;
   }
   .boardTitle {
-    font-size: 14px;
+    font-size: 0.8rem;
   }
   .creatorUsername,
   .lastContributorUsername {

@@ -3,7 +3,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import AdvanceSearch from "./pages/AdvanceSearch";
-import Item from "./pages/Item";
+import ItemPage from "./pages/ItemPage";
 
 function Router() {
   const router = createBrowserRouter([
@@ -28,7 +28,7 @@ function Router() {
       children: [
         {
           path: "/item/:id",
-          element: <Item />,
+          element: <ItemPage />,
         },
       ],
     },

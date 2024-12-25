@@ -1,0 +1,83 @@
+.entryPageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  background-color: var(--home-inner-bg-color);
+  min-height: 100vh;
+  border-radius: 5px;
+}
+.entryHeaderContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--home-inner-container-bg-color);
+  padding: 0.5rem 0;
+}
+.entryHeaderWrapper {
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+.entryTitle,
+.entryCompany {
+  font-family: var(--font-formal-family);
+  font-weight: 600;
+}
+.entryTitle {
+  font-size: 1.4rem;
+  color: var(--main-font-color);
+}
+.entryCompany {
+  font-size: 1.1rem;
+  color: var(--sub-font-color);
+}
+.entryMainContentContainer {
+  padding: 1rem 0.5rem 0 0.5rem;
+  display: flex;
+  width: 100%;
+}
+.entryHeaderLeft {
+  width: 65%;
+}
+.entryHeaderRight {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+}
+.entryHeaderRight button {
+  padding: 10px 15px;
+  font-family: var(--font-formal-family);
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  background-color: var(--home-inner-bg-color);
+  color: var(--main-font-color);
+  border-radius: 7px;
+  outline: none;
+  border: none;
+}
+.entryHeaderContainer button:hover {
+  background-color: var(--home-inner-bg-color-hover);
+}
+.defaultWidgetBodyContainer {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-formal-family);
+  font-size: 1.3rem;
+  padding: 0.3rem 0;
+  color: var(--main-font-color);
+}
+.entryImgContainer {
+  padding: 0rem 3rem;
+  width: 40%;
+}
+.entryDetailsContainer {
+  width: 60%;
+}
+.mainItemWrapper {
+  display: flex;
+}
+
+.entryImgPreview {
+  object-fit: cover;
+}
