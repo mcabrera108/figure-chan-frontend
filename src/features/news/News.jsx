@@ -1,10 +1,14 @@
 import homestyle from "../../style_modules/home.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import adData from "../../utils/testdata/adData";
 import NewsItem from "./NewsItem";
+import WidgetBtn from "../../components/ui/Buttons/WidgetBtn";
 function News() {
+  const widgetButtonProperties = {
+    buttonTitle: "View More",
+    buttonUrl: "/",
+  };
   return (
     <section className={homestyle.sideWidgetContainer}>
       <div className={homestyle.sideWidgetHeaderContainer}>
@@ -18,9 +22,7 @@ function News() {
           <span>News</span>
         </div>
         <div className={homestyle.widgetHeaderRight}>
-          <Link className={homestyle.widgetMoreBtn} to={"/"}>
-            View More
-          </Link>
+          <WidgetBtn widgetButtonProperties={widgetButtonProperties} />
         </div>
       </div>
       <div className={homestyle.sideWidgetBodyContainer}>

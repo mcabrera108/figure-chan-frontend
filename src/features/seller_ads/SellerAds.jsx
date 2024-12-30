@@ -1,13 +1,17 @@
 import homestyle from "../../style_modules/home.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import SalePreview from "./SalePreview";
 import adData from "../../utils/testdata/adData";
 import WidgetLayout from "../../components/ui/Widget/WidgetLayout";
 import WidgetHeader from "../../components/ui/Widget/WidgetHeader";
 import WidgetBody from "../../components/ui/Widget/WidgetBody";
+import WidgetBtn from "../../components/ui/Buttons/WidgetBtn";
 function SellerAds() {
+  const widgetButtonProperties = {
+    buttonTitle: "View More",
+    buttonUrl: "/",
+  };
   return (
     <WidgetLayout>
       <WidgetHeader>
@@ -21,9 +25,7 @@ function SellerAds() {
           <span>Ads For You!</span>
         </div>
         <div className={homestyle.widgetHeaderRight}>
-          <Link className={homestyle.widgetMoreBtn} to={"/"}>
-            View More
-          </Link>
+          <WidgetBtn widgetButtonProperties={widgetButtonProperties} />
         </div>
       </WidgetHeader>
       <WidgetBody>

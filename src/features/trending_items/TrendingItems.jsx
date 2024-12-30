@@ -3,7 +3,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFireFlameCurved } from "@fortawesome/free-solid-svg-icons";
 import adData from "../../utils/testdata/adData";
 import TopItem from "./TopItem";
+import WidgetSelect from "../../components/ui/Buttons/WidgetSelect";
 function TrendingItems() {
+  const widgetSelectProperties = [
+    {
+      optionTitle: "Figures",
+      key: "Figures_Select",
+      optionValue: "Figures",
+    },
+    {
+      optionTitle: "Goods",
+      key: "Goods_Select",
+      optionValue: "Goods",
+    },
+    {
+      optionTitle: "Media",
+      key: "Media_Select",
+      optionValue: "Media",
+    },
+  ];
   return (
     <section className={homestyle.sideWidgetContainer}>
       <div className={homestyle.sideWidgetHeaderContainer}>
@@ -17,11 +35,7 @@ function TrendingItems() {
           <span>Top 10</span>
         </div>
         <div className={homestyle.widgetHeaderRight}>
-          <select className={homestyle.widgetSelectItems}>
-            <option>Figures</option>
-            <option>Goods</option>
-            <option>Media</option>
-          </select>
+          <WidgetSelect widgetSelectProperties={widgetSelectProperties} />
         </div>
       </div>
 

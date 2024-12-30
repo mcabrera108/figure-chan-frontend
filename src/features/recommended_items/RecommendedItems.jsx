@@ -6,8 +6,26 @@ import ItemPreview from "./ItemPreview";
 import WidgetLayout from "../../components/ui/Widget/WidgetLayout";
 import WidgetHeader from "../../components/ui/Widget/WidgetHeader";
 import WidgetBody from "../../components/ui/Widget/WidgetBody";
+import WidgetSelect from "../../components/ui/Buttons/WidgetSelect";
 
 function RecommendedItems() {
+  const widgetSelectProperties = [
+    {
+      optionTitle: "Figures",
+      key: "Figures_Select",
+      optionValue: "Figures",
+    },
+    {
+      optionTitle: "Goods",
+      key: "Goods_Select",
+      optionValue: "Goods",
+    },
+    {
+      optionTitle: "Media",
+      key: "Media_Select",
+      optionValue: "Media",
+    },
+  ];
   return (
     <WidgetLayout>
       <WidgetHeader>
@@ -21,11 +39,7 @@ function RecommendedItems() {
           <span>Recommended</span>
         </div>
         <div className={homestyle.widgetHeaderRight}>
-          <select className={homestyle.widgetSelectItems}>
-            <option>Figures</option>
-            <option>Goods</option>
-            <option>Media</option>
-          </select>
+          <WidgetSelect widgetSelectProperties={widgetSelectProperties} />
         </div>
       </WidgetHeader>
       <WidgetBody>
