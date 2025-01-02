@@ -1,0 +1,146 @@
+.searchPageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  background-color: var(--home-inner-bg-color);
+  min-height: 100vh;
+  border-radius: 5px;
+  padding: 1rem 0.5rem 0 0.5rem;
+}
+.searchInputContainer form {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 15px;
+}
+.searchInputWrapper {
+  padding: 0.5rem 0.5rem;
+}
+.searchInputWrapper label,
+.searchInputWrapper select {
+  display: block;
+}
+.searchInputWrapper label,
+.searchInputWrapper span {
+  font-size: 1rem;
+  color: var(--sub-font-color);
+  font-family: var(--font-formal-family);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.searchInputWrapper span {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.searchInputWrapper .inputBtn {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 7px;
+  margin-bottom: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--input-btn-bg-color);
+  border: none;
+  outline: none;
+  color: var(--main-font-color);
+  text-decoration: none;
+  overflow-x: hidden;
+}
+.listContainer {
+  position: relative;
+  width: 100%;
+  color: var(--main-font-color);
+  border-radius: 7px;
+}
+.inputContainer {
+  display: flex;
+}
+.inputContainerText {
+  width: 100%;
+  display: flex;
+  padding: 0.6rem;
+  background-color: var(--input-select-bg-color);
+  position: absolute;
+}
+.inputContainerText div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px 0 0 7px;
+  padding: 0 0 0 0.7rem;
+  background-color: var(--input-btn-bg-color);
+}
+.searchInput {
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0 7px 7px 0;
+  border: none;
+  font-family: var(--font-formal-family);
+  background-color: var(--input-btn-bg-color);
+  color: var(--main-font-color);
+  outline: none;
+}
+.inputText {
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 7px;
+  background-color: var(--input-btn-bg-color);
+  color: var(--main-font-color);
+  outline: none;
+  border: none;
+}
+::placeholder {
+  color: var(--main-font-color);
+}
+.searchInputWrapper ul {
+  width: 100%;
+  font-weight: 600;
+  list-style: none;
+  position: absolute;
+  font-size: 1rem;
+  background-color: var(--input-select-bg-color);
+  color: var(--main-font-color);
+  border-radius: 7px;
+  font-family: var(--font-formal-family);
+  max-height: 15rem;
+  overflow-y: auto;
+  scrollbar-color: var(--input-select-bg-hover-color)
+    var(--input-select-bg-color);
+}
+.radioBtn {
+  border-radius: 25px;
+  outline: 1px solid white;
+  margin-right: 1rem;
+  width: 15px;
+  height: 15px;
+}
+.radioBtn.active {
+  background-color: var(--input-radio-text-color);
+}
+.choiceTitle.active {
+  color: var(--input-radio-text-color);
+}
+.searchInputWrapper ul li div {
+  display: flex;
+  align-items: center;
+}
+.searchInputWrapper ul li {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+.searchInputContainer ul li:hover {
+  background-color: var(--input-select-bg-hover-color);
+}
+.searchInputContainer {
+  width: 70%;
+}

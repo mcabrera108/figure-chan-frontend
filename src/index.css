@@ -16,10 +16,14 @@
   --font-formal-family: "Helvetica", "Roboto";
   --font-component-header-family: "Roboto", "Avenir";
   --main-font-color: white;
-  --sub-font-color: rgb(218, 218, 218);
+  --sub-font-color: rgb(209, 209, 209);
   --home-inner-bg-color-hover: rgba(65, 65, 65, 0.99);
   --home-inner-bg-color: rgba(54, 54, 54, 0.99);
   --home-inner-container-bg-color: rgba(27, 27, 27, 0.5);
+  --input-select-bg-color: rgba(82, 82, 82, 0.99);
+  --input-select-bg-hover-color: rgb(133, 133, 133);
+  --input-btn-bg-color: rgb(110, 110, 110);
+  --input-radio-text-color: rgb(230, 199, 25);
 }
 main {
   min-height: 100vh;

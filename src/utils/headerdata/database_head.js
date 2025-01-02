@@ -5,17 +5,17 @@ const database_head = {
     {
       /*User would be redirected to database/search if user attempts to modify durl to database/ */
       navOptTitle: "Search",
-      navOptUrl: "/database/search",
+      navOptUrl: "/search",
       id: uuid(),
     },
     {
       navOptTitle: "Top",
-      navOptUrl: "/database/top",
+      navOptUrl: "/search/top",
       id: uuid(),
     },
     {
       navOptTitle: "Recommendations",
-      navOptUrl: "/database/recommendations",
+      navOptUrl: "/search/recommendations",
       id: uuid(),
     },
   ],

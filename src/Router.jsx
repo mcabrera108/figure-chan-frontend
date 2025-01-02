@@ -20,7 +20,13 @@ function Router() {
     },
     {
       path: "/search",
-      element: <AdvanceSearch />,
+      element: <App />,
+      children: [
+        {
+          path: "/search",
+          element: <AdvanceSearch />,
+        },
+      ],
     },
     {
       path: "/item/:id",

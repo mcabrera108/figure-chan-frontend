@@ -30,7 +30,7 @@ function SubHeader() {
               }}
               className={style.navListOpt}
             >
-              <Link to={"/"}>Database</Link>
+              <Link to={"/search"}>Database</Link>
               {dbDropdown && <NavOpt navObj={database_head} />}
             </li>
             <li
