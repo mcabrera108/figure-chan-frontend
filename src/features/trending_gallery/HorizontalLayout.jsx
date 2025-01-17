@@ -4,7 +4,7 @@ function HorizontalLayout({ gallery }) {
   return (
     <div className={homestyle.trendingWrapperHor}>
       <div className={homestyle.bigHor}>
-        <img src={gallery[0].photoMeta.url} alt={gallery[0].title} />
+        <img src={gallery[3].photoMeta.url} alt={gallery[3].title} />
       </div>
       {/**Carousel Layout*/}
       <div className={homestyle.smallWrapperHor}>
