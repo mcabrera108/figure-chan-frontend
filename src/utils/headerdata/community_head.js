@@ -5,22 +5,22 @@ const community_head = {
     {
       /*User would be redirected to database/search if user attempts to modify durl to database/ */
       navOptTitle: "Articles",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "Boards",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "Clubs",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "Lists",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
   ],

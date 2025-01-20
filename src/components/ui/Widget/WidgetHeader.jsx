@@ -4,6 +4,6 @@ function WidgetHeader({ children }) {
   return <div className={homestyle.widgetHeaderContainer}>{children}</div>;
 }
 WidgetHeader.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 export default WidgetHeader;

@@ -1,0 +1,78 @@
+.loginPageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  background-color: var(--home-inner-bg-color);
+  min-height: 100vh;
+  border-radius: 5px;
+  padding: 1rem 0.5rem 0 0.5rem;
+}
+.mainContainer {
+  background-color: rgb(27, 27, 27);
+}
+.loginForm {
+  display: flex;
+  width: 100%;
+}
+.formInterior {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--main-font-color);
+  font-family: var(--font-formal-family);
+}
+.formInterior input {
+  margin-bottom: 1.5rem;
+  padding: 0.3rem 0.2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  background-color: gray;
+  border: 0;
+  color: var(--main-font-color);
+}
+.formInterior input:focus {
+  outline: 3px solid rgb(3, 121, 255);
+}
+.formSubmitBtn {
+  padding: 7px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+.formSubmitBtn:hover {
+  background-color: var(--layout-bg-color);
+}
+.formInterior label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.loginFormHeader {
+  margin-bottom: 0.5rem;
+}
+.loginFormSubheader {
+  margin-bottom: 2rem;
+}
+.loginFormHeader,
+.loginFormSubheader {
+  color: var(--main-font-color);
+  font-family: var(--font-formal-family);
+}
+.loginFormSubheader a {
+  text-decoration: underline;
+  color: var(--main-font-color);
+}
+.loginFormSubheader a:hover {
+  color: rgb(255, 188, 3);
+}
+.loginFormSubheader {
+  font-weight: 500;
+}
+.loginFormHeaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

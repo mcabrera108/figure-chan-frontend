@@ -4,32 +4,32 @@ const help_head = {
   navOptions: [
     {
       navOptTitle: "Rules and Guidelines",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "FAQ",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "Staff",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "Report A Bug",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "Support Us!",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "Advertise",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
   ],

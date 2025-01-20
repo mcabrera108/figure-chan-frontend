@@ -1,14 +1,11 @@
 import style from "../../../style_modules/layout.module.scss";
-import { useMediaQuery } from "react-responsive";
 import HeaderWrapperDesk from "./HeaderWrapperDesk";
 import HeaderWrapperMobile from "./HeadeWrapperMobile";
 import SearchBarMobile from "../../../features/search_bar/SearchBarMobile";
 import SideNav from "../SideNav/SideNav";
+import PropTypes from "prop-types";
 import { useState } from "react";
-function Header() {
-  const isMobileDevice = useMediaQuery({
-    maxWidth: 1024,
-  });
+function Header({ isMobileDevice }) {
   const [searchVisible, setSearchVisible] = useState(false);
   const [sideNavVisible, setSideNavVisible] = useState(false);
   return (
@@ -37,4 +34,7 @@ function Header() {
     </header>
   );
 }
+Header.propTypes = {
+  isMobileDevice: PropTypes.bool,
+};
 export default Header;

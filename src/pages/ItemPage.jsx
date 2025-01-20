@@ -1,4 +1,3 @@
-import { useItem } from "../services/APIItemDatabase";
 import Error from "./Error";
 import Loading from "../components/ui/Body/Loading";
 import PropTypes from "prop-types";
@@ -6,7 +5,6 @@ import homestyle from "../style_modules/home.module.scss";
 import itemstyle from "../style_modules/entrypage.module.scss";
 import { useMediaQuery } from "react-responsive";
 import boardData from "../utils/testdata/boardData";
-import TrendingItems from "../features/trending_items/TrendingItems";
 import NotesWidget from "../features/entry/entry_notes/NotesWidget";
 import EntryGallery from "../features/entry/entry_gallery/EntryGallery";
 import EntryImgBanner from "../features/entry/entry_gallery/EntryImgBanner";

@@ -4,14 +4,17 @@ import SubHeader from "../components/ui/Header/SubHeader";
 import PropTypes from "prop-types";
 import { Outlet } from "react-router-dom";
 import GoToTop from "../components/ui/Body/GoToTop";
-
+import { useMediaQuery } from "react-responsive";
 function BaseLayout() {
+  const isMobileDevice = useMediaQuery({
+    maxWidth: 1024,
+  });
   return (
     <>
-      <Header />
+      <Header isMobileDevice={isMobileDevice} />
       <SubHeader />
       <main>
-        <Outlet />
+        <Outlet isMobileDevice={isMobileDevice} />
       </main>
       <Footer />
       <GoToTop />

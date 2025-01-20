@@ -144,3 +144,11 @@
 .searchInputContainer {
   width: 70%;
 }
+@media screen and (max-width: 1024px) {
+  .searchPageWrapper {
+    width: 100%;
+  }
+  .searchInputContainer {
+    width: 100%;
+  }
+}

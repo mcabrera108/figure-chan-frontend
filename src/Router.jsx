@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import AdvanceSearch from "./pages/AdvanceSearch";
 import ItemPage from "./pages/ItemPage";
+import LoginPage from "./pages/LoginPage";
+import ConstructionPage from "./pages/ConstructionPage";
 
 function Router() {
   const router = createBrowserRouter([
@@ -16,6 +18,14 @@ function Router() {
           path: "/",
           element: <Home />,
         },
+        {
+          path: "/login",
+          element: <LoginPage />,
+        },
+        {
+          path: "/register",
+          element: <ConstructionPage />,
+        },
       ],
     },
     {
@@ -25,6 +35,14 @@ function Router() {
         {
           path: "/search",
           element: <AdvanceSearch />,
+        },
+        {
+          path: "/search/top",
+          element: <ConstructionPage />,
+        },
+        {
+          path: "/search/recommendations",
+          element: <ConstructionPage />,
         },
       ],
     },

@@ -55,8 +55,8 @@ function HeaderWrapperMobile({
         </button>
       </div>
       <div className={style.loginContainerMobile}>
-        <Link>Login</Link>
-        <Link>Register</Link>
+        <Link to={"/login"}>Login</Link>
+        <Link to={"/register"}>Register</Link>
       </div>
     </div>
   );

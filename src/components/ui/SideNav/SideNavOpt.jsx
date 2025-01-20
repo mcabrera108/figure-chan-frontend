@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 function SideNavOption({ navObj, isActive, setSideNavOptions, setToDefault }) {
   return (
     <li>
@@ -21,9 +22,11 @@ function SideNavOption({ navObj, isActive, setSideNavOptions, setToDefault }) {
         <>
           {navObj.navOptions.map((nav) => {
             return (
-              <div key={nav.id} className={homestyle.sideNavSubOption}>
-                {nav.navOptTitle}
-              </div>
+              <Link to={nav.navOptUrl} key={nav.id}>
+                <div className={homestyle.sideNavSubOption}>
+                  {nav.navOptTitle}
+                </div>
+              </Link>
             );
           })}
         </>

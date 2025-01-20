@@ -23,6 +23,8 @@ import WidgetLayout from "../components/ui/Widget/WidgetLayout";
 import WidgetHeader from "../components/ui/Widget/WidgetHeader";
 /*Importing 3rd Part Components */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import WidgetBody from "../components/ui/Widget/WidgetBody";
 function AdvanceSearch() {
   const [isActiveComponent, setActiveComponent] = useState(-1);
   const [itemTypeBtnValue, setItemTypeBtnValue] = useState("Any");
@@ -117,107 +119,114 @@ function AdvanceSearch() {
             <WidgetLayout>
               <WidgetHeader>
                 <div className={homestyle.widgetHeaderLeft}>
-                  <FontAwesomeIcon />
+                  <FontAwesomeIcon
+                    icon={faMagnifyingGlass}
+                    size="lg"
+                    color="white"
+                    className={homestyle.iconWidget}
+                  />
                   <span>Advance Search</span>
                 </div>
               </WidgetHeader>
-              <form action="">
-                <AdvSearchInputSelectOne
-                  inputTagTitle={"Item Type"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={1}
-                  isActiveComponent={isActiveComponent}
-                  searchOptions={itemType}
-                  buttonValue={itemTypeBtnValue}
-                  handleButtonValue={handleItemTypeBtnValue}
-                />
-                <AdvSearchInputSelectMultiple
-                  inputTagTitle={"Category Type"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={2}
-                  isActiveComponent={isActiveComponent}
-                  searchOptions={renderSwitch(itemTypeBtnValue)}
-                  buttonValue={categoryTypeBtnValue}
-                  handleButtonValue={handleCategoryTypeBtnValue}
-                />
+              <WidgetBody>
+                <form action="">
+                  <AdvSearchInputSelectOne
+                    inputTagTitle={"Item Type"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={1}
+                    isActiveComponent={isActiveComponent}
+                    searchOptions={itemType}
+                    buttonValue={itemTypeBtnValue}
+                    handleButtonValue={handleItemTypeBtnValue}
+                  />
+                  <AdvSearchInputSelectMultiple
+                    inputTagTitle={"Category Type"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={2}
+                    isActiveComponent={isActiveComponent}
+                    searchOptions={renderSwitch(itemTypeBtnValue)}
+                    buttonValue={categoryTypeBtnValue}
+                    handleButtonValue={handleCategoryTypeBtnValue}
+                  />
 
-                <AdvSearchInputSelectMultiple
-                  inputTagTitle={"Country Type"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={3}
-                  isActiveComponent={isActiveComponent}
-                  searchOptions={countrytype}
-                  buttonValue={countryTypeBtnValue}
-                  handleButtonValue={handleCountryTypeBtnValue}
-                />
-                <AdvSearchInputSelectMultiple
-                  inputTagTitle={"Item Status"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={4}
-                  isActiveComponent={isActiveComponent}
-                  searchOptions={itemstatustype}
-                  buttonValue={itemStatusBtnValue}
-                  handleButtonValue={handleItemStatusBtnValue}
-                />
-                <AdvSearchInputSelectOne
-                  inputTagTitle={"Cast-Off"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={5}
-                  isActiveComponent={isActiveComponent}
-                  searchOptions={castoff}
-                  buttonValue={castOffBtnValue}
-                  handleButtonValue={handleCastOffBtnValue}
-                />
-                <AdvSearchNumberText inputTagTitle={"Content Level"} />
-                <AdvSearchSelect
-                  inputTagTitle={"Character"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={6}
-                  buttonValue={characterBtnValue}
-                  handleButtonValue={handleCharacterBtnValue}
-                  isActiveComponent={isActiveComponent}
-                />
-                <AdvSearchSelect
-                  inputTagTitle={"Manufacturer"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={7}
-                  buttonValue={manufacturerBtnValue}
-                  handleButtonValue={handleManufacturerBtnValue}
-                  isActiveComponent={isActiveComponent}
-                />
-                <AdvSearchSelect
-                  inputTagTitle={"Artist"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={8}
-                  buttonValue={artistBtnValue}
-                  handleButtonValue={handleArtistBtnValue}
-                  isActiveComponent={isActiveComponent}
-                />
-                <AdvSearchSelect
-                  inputTagTitle={"Origin"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={9}
-                  buttonValue={originBtnValue}
-                  handleButtonValue={handleOriginBtnValue}
-                  isActiveComponent={isActiveComponent}
-                />
-                <AdvSearchSelect
-                  inputTagTitle={"Materials"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={10}
-                  buttonValue={materialBtnValue}
-                  handleButtonValue={handleMaterialsBtnValue}
-                  isActiveComponent={isActiveComponent}
-                />
-                <AdvSearchDate
-                  inputTagTitle={"Release Date"}
-                  handleActiveComponent={handleActiveComponent}
-                  searchInputValue={11}
-                  buttonValue={releaseDateBtnValue}
-                  handleButtonValue={handleReleaseDateBtnValue}
-                  isActiveComponent={isActiveComponent}
-                />
-              </form>
+                  <AdvSearchInputSelectMultiple
+                    inputTagTitle={"Country Type"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={3}
+                    isActiveComponent={isActiveComponent}
+                    searchOptions={countrytype}
+                    buttonValue={countryTypeBtnValue}
+                    handleButtonValue={handleCountryTypeBtnValue}
+                  />
+                  <AdvSearchInputSelectMultiple
+                    inputTagTitle={"Item Status"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={4}
+                    isActiveComponent={isActiveComponent}
+                    searchOptions={itemstatustype}
+                    buttonValue={itemStatusBtnValue}
+                    handleButtonValue={handleItemStatusBtnValue}
+                  />
+                  <AdvSearchInputSelectOne
+                    inputTagTitle={"Cast-Off"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={5}
+                    isActiveComponent={isActiveComponent}
+                    searchOptions={castoff}
+                    buttonValue={castOffBtnValue}
+                    handleButtonValue={handleCastOffBtnValue}
+                  />
+                  <AdvSearchNumberText inputTagTitle={"Content Level"} />
+                  <AdvSearchSelect
+                    inputTagTitle={"Character"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={6}
+                    buttonValue={characterBtnValue}
+                    handleButtonValue={handleCharacterBtnValue}
+                    isActiveComponent={isActiveComponent}
+                  />
+                  <AdvSearchSelect
+                    inputTagTitle={"Manufacturer"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={7}
+                    buttonValue={manufacturerBtnValue}
+                    handleButtonValue={handleManufacturerBtnValue}
+                    isActiveComponent={isActiveComponent}
+                  />
+                  <AdvSearchSelect
+                    inputTagTitle={"Artist"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={8}
+                    buttonValue={artistBtnValue}
+                    handleButtonValue={handleArtistBtnValue}
+                    isActiveComponent={isActiveComponent}
+                  />
+                  <AdvSearchSelect
+                    inputTagTitle={"Origin"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={9}
+                    buttonValue={originBtnValue}
+                    handleButtonValue={handleOriginBtnValue}
+                    isActiveComponent={isActiveComponent}
+                  />
+                  <AdvSearchSelect
+                    inputTagTitle={"Materials"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={10}
+                    buttonValue={materialBtnValue}
+                    handleButtonValue={handleMaterialsBtnValue}
+                    isActiveComponent={isActiveComponent}
+                  />
+                  <AdvSearchDate
+                    inputTagTitle={"Release Date"}
+                    handleActiveComponent={handleActiveComponent}
+                    searchInputValue={11}
+                    buttonValue={releaseDateBtnValue}
+                    handleButtonValue={handleReleaseDateBtnValue}
+                    isActiveComponent={isActiveComponent}
+                  />
+                </form>
+              </WidgetBody>
             </WidgetLayout>
           </div>
         </div>

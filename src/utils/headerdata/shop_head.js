@@ -5,17 +5,17 @@ const shop_head = {
     {
       /*User would be redirected to database/search if user attempts to modify durl to database/ */
       navOptTitle: "Ads",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "Trade",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
     {
       navOptTitle: "3rd Party Stores",
-      navOptUrl: "",
+      navOptUrl: "/",
       id: uuid(),
     },
   ],

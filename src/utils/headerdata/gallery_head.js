@@ -5,12 +5,12 @@ const gallery_head = {
     {
       /*User would be redirected to database/search if user attempts to modify durl to database/ */
       navOptTitle: "Browse",
-      navOptUrl: "",
+      navOptUrl: "/gallery",
       id: uuid(),
     },
     {
       navOptTitle: "Popular",
-      navOptUrl: "",
+      navOptUrl: "/popular",
       id: uuid(),
     },
   ],

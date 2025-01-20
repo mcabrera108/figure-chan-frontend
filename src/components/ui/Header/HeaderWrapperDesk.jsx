@@ -30,8 +30,8 @@ function HeaderWrapperDesk() {
 
       <div className={style.loginContainer}>
         {/*Conditionally Render User Icon*/}
-        <button>Login</button>
-        <button>Register</button>
+        <Link to={"/login"}>Login</Link>
+        <Link to={"/register"}>Register</Link>
       </div>
     </div>
   );
