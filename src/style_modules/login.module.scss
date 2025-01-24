@@ -1,78 +1,110 @@
-.loginPageWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 85%;
-  background-color: var(--home-inner-bg-color);
-  min-height: 100vh;
-  border-radius: 5px;
-  padding: 1rem 0.5rem 0 0.5rem;
+* {
+  font-family: var(--font-formal-family);
 }
 .mainContainer {
-  background-color: rgb(27, 27, 27);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.623),
+      rgba(255, 78, 78, 0.548)
+    ),
+    url("../assets/godzilla.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: rgba(27, 27, 27, 0.75);
 }
-.loginForm {
-  display: flex;
-  width: 100%;
-}
-.formInterior {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--main-font-color);
-  font-family: var(--font-formal-family);
-}
-.formInterior input {
-  margin-bottom: 1.5rem;
-  padding: 0.3rem 0.2rem;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  background-color: gray;
-  border: 0;
-  color: var(--main-font-color);
-}
-.formInterior input:focus {
-  outline: 3px solid rgb(3, 121, 255);
-}
-.formSubmitBtn {
-  padding: 7px 5px;
-  cursor: pointer;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  font-size: 1.2rem;
-}
-.formSubmitBtn:hover {
-  background-color: var(--layout-bg-color);
-}
-.formInterior label {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
+.formPageContainer {
+  min-height: 100vh;
+  width: 35%;
 }
 .loginFormHeader {
-  margin-bottom: 0.5rem;
-}
-.loginFormSubheader {
-  margin-bottom: 2rem;
-}
-.loginFormHeader,
-.loginFormSubheader {
   color: var(--main-font-color);
-  font-family: var(--font-formal-family);
+  font-weight: 600;
+  font-size: 2.1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.3rem;
 }
-.loginFormSubheader a {
+.loginFormSubHeader {
+  display: flex;
+  justify-content: center;
+  color: var(--main-font-color);
+  font-weight: 500;
+}
+.loginFormSubHeader a {
+  text-decoration: underline;
+}
+.loginFormSubHeader a:visited {
+  color: var(--main-font-color);
+}
+.loginFormHeaderContainer {
+  margin-bottom: 1.5rem;
+}
+.loginLabel {
+  font-size: 1rem;
+  color: var(--main-font-color);
+  margin-bottom: 0.6em;
+}
+.formSubContainer a {
   text-decoration: underline;
   color: var(--main-font-color);
 }
-.loginFormSubheader a:hover {
-  color: rgb(255, 188, 3);
-}
-.loginFormSubheader {
-  font-weight: 500;
-}
-.loginFormHeaderContainer {
+.formSubContainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+}
+.formSubContainer input {
+  transform: scale(1.3);
+}
+.formField {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+  outline: 0;
+  border: 1px solid rgb(107, 107, 107);
+  background-color: var(--form-field-bg-color);
+  color: var(--main-font-color);
+}
+.formSubmitBtn {
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--layout-bg-color);
+  color: var(--main-font-color);
+}
+.formSubmitBtn:hover {
+  color: var(--main-font-color);
+  background-color: var(--layout-sub-drk-bg-color);
+}
+.formField:focus {
+  border-bottom: 1px solid white;
+}
+.usernameContainer,
+.passwordContainer {
+  display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 719px) {
+  .loginFormHeader {
+    font-size: 1.5rem;
+  }
+  .loginFormSubHeader {
+    font-size: 0.8rem;
+  }
+  .formPageContainer {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .formPageContainer {
+    width: 60%;
+  }
 }

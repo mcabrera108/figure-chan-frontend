@@ -18,46 +18,68 @@ function LoginPage() {
   return (
     <div className={loginstyle.mainContainer}>
       <div className={homestyle.homeContainer}>
-        <div className={loginstyle.loginPageWrapper}>
-          <div className={loginstyle.loginFormContainer}>
-            <div className={loginstyle.loginFormHeaderContainer}>
-              <h2 className={loginstyle.loginFormHeader}>
-                Login to your account
-              </h2>
-              <h4 className={loginstyle.loginFormSubheader}>
-                Or <Link to={"/register"}>sign up</Link> for a new account
-              </h4>
-              <div className={loginstyle.loginForm}>
-                <form
-                  onSubmit={handleLogin}
-                  className={loginstyle.formInterior}
+        <div className={loginstyle.formPageContainer}>
+          <div className={loginstyle.loginFormHeaderContainer}>
+            <h2 className={loginstyle.loginFormHeader}>
+              Log in to your account
+            </h2>
+            <h4 className={loginstyle.loginFormSubHeader}>
+              Or &nbsp; <Link to={"/register"}> sign up </Link> &nbsp; for a new
+              account
+            </h4>
+          </div>
+          <form onSubmit={handleLogin}>
+            <div className={loginstyle.formContainer}>
+              <div className={loginstyle.usernameContainer}>
+                <label htmlFor="username" className={loginstyle.loginLabel}>
+                  Username
+                </label>
+                <input
+                  type="text"
+                  id="username"
+                  className={loginstyle.formField}
+                  onChange={(e) => {
+                    setUsername(e.target.value);
+                  }}
+                  value={username}
+                />
+              </div>
+              <div className={loginstyle.passwordContainer}>
+                <label
+                  htmlFor="loginpassword"
+                  className={loginstyle.loginLabel}
                 >
-                  <label htmlFor="username">Username</label>
-                  <input
-                    type="text"
-                    onChange={(e) => {
-                      setUsername(e.target.value);
-                    }}
-                    id="username"
-                    value={username}
-                  />
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="password"
-                    onChange={(e) => {
-                      setPassword(e.target.value);
-                    }}
-                    value={password}
-                    id="password"
-                  />
-
-                  <button type="submit" className={loginstyle.formSubmitBtn}>
-                    Sign In
-                  </button>
-                </form>
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="loginpassword"
+                  className={loginstyle.formField}
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
               </div>
             </div>
-          </div>
+            <div className={loginstyle.formSubContainer}>
+              <div>
+                <input type="checkbox" id="rememberuser" />
+                <label htmlFor="rememberuser" className={loginstyle.loginLabel}>
+                  {" "}
+                  Remember Me
+                </label>
+              </div>
+              <div>
+                <Link to={"/"}>Forgot Your Password</Link>
+              </div>
+            </div>
+            <div className={loginstyle.submitContainer}>
+              <button type="submit" className={loginstyle.formSubmitBtn}>
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

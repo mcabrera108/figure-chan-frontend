@@ -8,9 +8,9 @@ function HeaderWrapperDesk() {
   return (
     <div className={style.headerWrapper}>
       <Link className={style.logoContainer} to={"/"}>
-        Figure-Chan
+        Figure-Dev
       </Link>
-      <span className={style.banner}>Figure Chan Banner</span>
+      <span className={style.banner}>Figure-Dev Banner</span>
       {/*Include Form Here for Call to an API */}
       <div className={style.searchBarContainer}>
         <input

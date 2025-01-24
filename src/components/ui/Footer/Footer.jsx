@@ -3,7 +3,7 @@ function Footer() {
   return (
     <footer className={style.footerContainer}>
       <div className={style.footerWrapper}>
-        @ 2024-2025 ShrimpDev. All rights reserved.
+        @ 2024-2025 Martin Cabrera. All rights reserved.
       </div>
     </footer>
   );

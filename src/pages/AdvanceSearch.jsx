@@ -225,6 +225,10 @@ function AdvanceSearch() {
                     handleButtonValue={handleReleaseDateBtnValue}
                     isActiveComponent={isActiveComponent}
                   />
+
+                  <button type="submit" className={searchstyle.searchFormBtn}>
+                    Search
+                  </button>
                 </form>
               </WidgetBody>
             </WidgetLayout>
