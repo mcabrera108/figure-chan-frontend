@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function RegisterPage() {
-  return <></>;
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  return (
+    <div className={loginstyle.mainContainer}>
+      <div className={homestyle.homeContainer}></div>
+    </div>
+  );
 }
 export default RegisterPage;

@@ -2,11 +2,7 @@
   font-family: var(--font-formal-family);
 }
 .mainContainer {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.623),
-      rgba(255, 78, 78, 0.548)
-    ),
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.623)),
     url("../assets/godzilla.jpeg");
   background-size: cover;
   background-position: center;
