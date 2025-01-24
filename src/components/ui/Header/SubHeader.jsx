@@ -81,7 +81,7 @@ function SubHeader() {
               }}
               className={style.navListOpt}
             >
-              <Link to={"/"}>Help</Link>
+              <Link to={"/rules"}>Help</Link>
               {helpDropdown && <NavOpt navObj={help_head} />}
             </li>
           </ul>

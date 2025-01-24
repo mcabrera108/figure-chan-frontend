@@ -83,8 +83,7 @@
 .formField:focus {
   border-bottom: 1px solid white;
 }
-.usernameContainer,
-.passwordContainer {
+.fieldContainer {
   display: flex;
   flex-direction: column;
 }

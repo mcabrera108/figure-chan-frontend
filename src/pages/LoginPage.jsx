@@ -3,6 +3,7 @@ import homestyle from "../style_modules/home.module.scss";
 import loginstyle from "../style_modules/login.module.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import SignInTextInput from "../components/form/input/SignInTextInput";
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -24,43 +25,24 @@ function LoginPage() {
               Log in to your account
             </h2>
             <h4 className={loginstyle.loginFormSubHeader}>
-              Or &nbsp; <Link to={"/register"}> sign up </Link> &nbsp; for a new
+              Or&nbsp;<Link to={"/register"}> sign up </Link>&nbsp;for a new
               account
             </h4>
           </div>
           <form onSubmit={handleLogin}>
             <div className={loginstyle.formContainer}>
-              <div className={loginstyle.usernameContainer}>
-                <label htmlFor="username" className={loginstyle.loginLabel}>
-                  Username
-                </label>
-                <input
-                  type="text"
-                  id="username"
-                  className={loginstyle.formField}
-                  onChange={(e) => {
-                    setUsername(e.target.value);
-                  }}
-                  value={username}
-                />
-              </div>
-              <div className={loginstyle.passwordContainer}>
-                <label
-                  htmlFor="loginpassword"
-                  className={loginstyle.loginLabel}
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  id="loginpassword"
-                  className={loginstyle.formField}
-                  value={password}
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
-                />
-              </div>
+              <SignInTextInput
+                fieldId={"username"}
+                fieldName={username}
+                setFieldName={setUsername}
+                labelName={"Username"}
+              />
+              <SignInTextInput
+                fieldId={"loginpassword"}
+                fieldName={password}
+                setFieldName={setPassword}
+                labelName={"Password"}
+              />
             </div>
             <div className={loginstyle.formSubContainer}>
               <div>
@@ -76,7 +58,7 @@ function LoginPage() {
             </div>
             <div className={loginstyle.submitContainer}>
               <button type="submit" className={loginstyle.formSubmitBtn}>
-                Submit
+                Log In
               </button>
             </div>
           </form>

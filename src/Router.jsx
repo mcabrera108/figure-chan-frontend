@@ -6,6 +6,8 @@ import AdvanceSearch from "./pages/AdvanceSearch";
 import ItemPage from "./pages/ItemPage";
 import LoginPage from "./pages/LoginPage";
 import ConstructionPage from "./pages/ConstructionPage";
+import RegisterPage from "./pages/RegisterPage";
+import RulesPage from "./pages/RulesPage";
 
 function Router() {
   const router = createBrowserRouter([
@@ -24,7 +26,11 @@ function Router() {
         },
         {
           path: "/register",
-          element: <ConstructionPage />,
+          element: <RegisterPage />,
+        },
+        {
+          path: "/rules",
+          element: <RulesPage />,
         },
       ],
     },

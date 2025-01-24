@@ -4,7 +4,7 @@ const help_head = {
   navOptions: [
     {
       navOptTitle: "Rules and Guidelines",
-      navOptUrl: "/",
+      navOptUrl: "/rules",
       id: uuid(),
     },
     {
