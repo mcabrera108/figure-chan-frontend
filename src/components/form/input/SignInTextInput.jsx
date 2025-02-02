@@ -10,15 +10,20 @@ function SignInTextInput(props) {
         {props.labelName}
         <FontAwesomeIcon icon={faAsterisk} color={"red"} />
       </label>
-      <input
-        type={props.fieldType}
-        id={props.fieldId}
-        className={loginstyle.formField}
-        onChange={(e) => {
-          props.setFieldName(e.target.value);
-        }}
-        value={props.fieldName}
-      />
+      <div className={loginstyle.loginInputContainer}>
+        <input
+          type={props.fieldType}
+          id={props.fieldId}
+          className={loginstyle.formField}
+          onChange={(e) => {
+            props.setFieldName(e.target.value);
+          }}
+          value={props.fieldName}
+        />
+        <span className={loginstyle.iconSpan} onClick={props.iconClick}>
+          {props.icon}
+        </span>
+      </div>
       {props.incompleteField && props.fieldName.trim() === "" ? (
         <span className={loginstyle.fieldMessage}>{props.fieldMessage}</span>
       ) : (
@@ -35,5 +40,7 @@ SignInTextInput.propTypes = {
   fieldType: PropTypes.string,
   incompleteField: PropTypes.bool,
   fieldMessage: PropTypes.string,
+  icon: PropTypes.object,
+  iconClick: PropTypes.func,
 };
 export default SignInTextInput;

@@ -82,6 +82,7 @@
   border: 1px solid rgb(107, 107, 107);
   background-color: var(--form-field-bg-color);
   color: var(--main-font-color);
+  width: 100%;
 }
 .formSubmitBtn,
 .disabledSubmitBtn {
@@ -94,6 +95,19 @@
   border-radius: 5px;
   background-color: var(--layout-bg-color);
   color: var(--main-font-color);
+}
+.loginInputContainer {
+  display: flex;
+}
+.inputIcon {
+  position: absolute;
+  margin-right: 3%;
+}
+.iconSpan {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
 }
 .disabledSubmitBtn {
   background-color: var(--layout-sub-drk-bg-color);
@@ -133,9 +147,15 @@
   .formPageWrapper {
     width: 90%;
   }
+  .inputIcon {
+    margin-right: 10%;
+  }
 }
 @media screen and (min-width: 720px) and (max-width: 1023px) {
   .formPageWrapper {
     width: 60%;
+  }
+  .inputIcon {
+    margin-right: 8%;
   }
 }

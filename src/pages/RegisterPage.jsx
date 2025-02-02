@@ -7,6 +7,8 @@ import { APIRegisterUser } from "../services/APIUserMethods";
 import PasswordValidationField from "../components/form/input/PasswordValidationField";
 import { useNavigate } from "react-router-dom";
 import { hasAllConditionsForPassword } from "../utils/validationMessage";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function RegisterPage() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
@@ -15,6 +17,8 @@ function RegisterPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [incompleteField, setIncompleteField] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const [passwordInputType, setPasswordInputType] = useState("password");
+  const [confirmPassType, setConfirmPassType] = useState("password");
 
   const isDisabled =
     !username ||
@@ -24,6 +28,21 @@ function RegisterPage() {
     hasAllConditionsForPassword(password) === false ||
     !isChecked;
 
+  function handleEyeClick() {
+    if (passwordInputType === "password") {
+      setPasswordInputType("text");
+    } else {
+      setPasswordInputType("password");
+    }
+  }
+
+  function handleConfirmEyeClick() {
+    if (confirmPassType === "password") {
+      setConfirmPassType("text");
+    } else {
+      setConfirmPassType("password");
+    }
+  }
   async function handleRegister(e) {
     e.preventDefault();
     if (
@@ -52,6 +71,7 @@ function RegisterPage() {
     setConfirmPassword("");
     setEmail("");
   }
+
   return (
     <div className={loginstyle.mainContainer}>
       <div className={homestyle.homeContainer}>
@@ -91,9 +111,27 @@ function RegisterPage() {
                 setFieldName={setPassword}
                 fieldName={password}
                 labelName={"Password"}
-                fieldType={"password"}
+                fieldType={passwordInputType}
                 incompleteField={incompleteField}
                 fieldMessage={"Password field needs a valid value!"}
+                icon={
+                  passwordInputType === "password" ? (
+                    <FontAwesomeIcon
+                      icon={faEye}
+                      color={"darkgray"}
+                      className={loginstyle.inputIcon}
+                      size={"lg"}
+                    />
+                  ) : (
+                    <FontAwesomeIcon
+                      icon={faEyeSlash}
+                      color={"darkgray"}
+                      className={loginstyle.inputIcon}
+                      size={"lg"}
+                    />
+                  )
+                }
+                iconClick={handleEyeClick}
               />
               <PasswordValidationField password={password} />
               <SignInTextInput
@@ -101,9 +139,27 @@ function RegisterPage() {
                 setFieldName={setConfirmPassword}
                 fieldName={confirmPassword}
                 labelName={"Confirm Password"}
-                fieldType={"password"}
+                fieldType={confirmPassType}
                 incompleteField={incompleteField}
                 fieldMessage={"Confirm Password needs to match Password"}
+                icon={
+                  confirmPassType === "password" ? (
+                    <FontAwesomeIcon
+                      icon={faEye}
+                      color={"darkgray"}
+                      className={loginstyle.inputIcon}
+                      size={"lg"}
+                    />
+                  ) : (
+                    <FontAwesomeIcon
+                      icon={faEyeSlash}
+                      color={"darkgray"}
+                      className={loginstyle.inputIcon}
+                      size={"lg"}
+                    />
+                  )
+                }
+                iconClick={handleConfirmEyeClick}
               />
             </div>
             <div className={loginstyle.formSubContainer}>
