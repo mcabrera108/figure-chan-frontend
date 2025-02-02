@@ -1,0 +1,13 @@
+.helpTabDefPageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  background-color: var(--home-inner-bg-color);
+  min-height: 100vh;
+  border-radius: 5px;
+  padding: 1rem 0.5rem 0 0.5rem;
+}
+/*Styling Modules for Staff*/
+.staffContainer {
+  width: 70%;
+}

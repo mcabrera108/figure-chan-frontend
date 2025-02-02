@@ -4,22 +4,35 @@ import loginstyle from "../style_modules/login.module.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import SignInTextInput from "../components/form/input/SignInTextInput";
+import { APILoginUser } from "../services/APIUserMethods";
+import { useNavigate } from "react-router-dom";
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const isDisabled = !username || !password;
 
-  function handleLogin(e) {
+  async function handleLogin(e) {
     e.preventDefault();
-    setPassword("");
-    setUsername("");
-    alert(
-      "Thank you for logging in! The login feature is currently under construction. Come back another time!"
-    );
+    if (!username || !password) {
+      setPassword("");
+      setUsername("");
+      return;
+    }
+    const apiResponse = await APILoginUser({
+      username: username,
+      password: password,
+    });
+
+    if (apiResponse.redirectUrl) {
+      navigate(apiResponse.redirectUrl);
+    }
   }
+
   return (
     <div className={loginstyle.mainContainer}>
       <div className={homestyle.homeContainer}>
-        <div className={loginstyle.formPageContainer}>
+        <div className={loginstyle.formPageWrapper}>
           <div className={loginstyle.loginFormHeaderContainer}>
             <h2 className={loginstyle.loginFormHeader}>
               Log in to your account
@@ -36,19 +49,20 @@ function LoginPage() {
                 fieldName={username}
                 setFieldName={setUsername}
                 labelName={"Username"}
+                fieldType={"text"}
               />
               <SignInTextInput
                 fieldId={"loginpassword"}
                 fieldName={password}
                 setFieldName={setPassword}
                 labelName={"Password"}
+                fieldType={"password"}
               />
             </div>
             <div className={loginstyle.formSubContainer}>
-              <div>
+              <div className={loginstyle.formLabelContainer}>
                 <input type="checkbox" id="rememberuser" />
-                <label htmlFor="rememberuser" className={loginstyle.loginLabel}>
-                  {" "}
+                <label htmlFor="rememberuser" className={loginstyle.termsLabel}>
                   Remember Me
                 </label>
               </div>
@@ -57,7 +71,15 @@ function LoginPage() {
               </div>
             </div>
             <div className={loginstyle.submitContainer}>
-              <button type="submit" className={loginstyle.formSubmitBtn}>
+              <button
+                type="submit"
+                className={
+                  isDisabled
+                    ? loginstyle.disabledSubmitBtn
+                    : loginstyle.formSubmitBtn
+                }
+                disabled={isDisabled}
+              >
                 Log In
               </button>
             </div>

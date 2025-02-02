@@ -9,27 +9,27 @@ const help_head = {
     },
     {
       navOptTitle: "FAQ",
-      navOptUrl: "/",
+      navOptUrl: "/faq",
       id: uuid(),
     },
     {
       navOptTitle: "Staff",
-      navOptUrl: "/",
+      navOptUrl: "/staff",
       id: uuid(),
     },
     {
       navOptTitle: "Report A Bug",
-      navOptUrl: "/",
+      navOptUrl: "/report",
       id: uuid(),
     },
     {
       navOptTitle: "Support Us!",
-      navOptUrl: "/",
+      navOptUrl: "/supportus",
       id: uuid(),
     },
     {
       navOptTitle: "Advertise",
-      navOptUrl: "/",
+      navOptUrl: "/advertise",
       id: uuid(),
     },
   ],
