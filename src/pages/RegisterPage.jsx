@@ -3,7 +3,7 @@ import loginstyle from "../style_modules/login.module.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import SignInTextInput from "../components/form/input/SignInTextInput";
-import APIRegisterUser from "../services/APIUserMethods";
+import { APIRegisterUser } from "../services/APIUserMethods";
 import PasswordValidationField from "../components/form/input/PasswordValidationField";
 import { useNavigate } from "react-router-dom";
 import { hasAllConditionsForPassword } from "../utils/validationMessage";
