@@ -10,8 +10,9 @@ describe("Header Component", () => {
         <HeaderWrapperDesk />
       </MemoryRouter>
     );
-    expect(
-      container.getByRole("link", { name: "Figure-Chan" })
-    ).toHaveAttribute("href", "/");
+    expect(container.getByRole("link", { name: "Figure-Dev" })).toHaveAttribute(
+      "href",
+      "/"
+    );
   });
 });
