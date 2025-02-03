@@ -2,14 +2,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
-import AdvanceSearch from "./pages/AdvanceSearch";
+// import AdvanceSearch from "./pages/AdvanceSearch";
 import ItemPage from "./pages/ItemPage";
 import LoginPage from "./pages/LoginPage";
 import ConstructionPage from "./pages/ConstructionPage";
 import RegisterPage from "./pages/RegisterPage";
-import RulesPage from "./pages/RulesPage";
-import FAQPage from "./pages/FAQPage";
-import StaffPage from "./pages/StaffPage";
+// import RulesPage from "./pages/RulesPage";
+// import FAQPage from "./pages/FAQPage";
+// import StaffPage from "./pages/StaffPage";
 
 function Router() {
   const router = createBrowserRouter([
@@ -32,15 +32,35 @@ function Router() {
         },
         {
           path: "/rules",
-          element: <RulesPage />,
+          element: <ConstructionPage />,
         },
         {
           path: "/faq",
-          element: <FAQPage />,
+          element: <ConstructionPage />,
         },
         {
           path: "/staff",
-          element: <StaffPage />,
+          element: <ConstructionPage />,
+        },
+        {
+          path: "/bugreport",
+          element: <ConstructionPage />,
+        },
+        {
+          path: "/support",
+          element: <ConstructionPage />,
+        },
+        {
+          path: "/advertise",
+          element: <ConstructionPage />,
+        },
+        {
+          path: "/gallery",
+          element: <ConstructionPage />,
+        },
+        {
+          path: "/popular",
+          element: <ConstructionPage />,
         },
       ],
     },
@@ -50,7 +70,7 @@ function Router() {
       children: [
         {
           path: "/search",
-          element: <AdvanceSearch />,
+          element: <ConstructionPage />,
         },
         {
           path: "/search/top",

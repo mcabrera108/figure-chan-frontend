@@ -19,12 +19,12 @@ const help_head = {
     },
     {
       navOptTitle: "Report A Bug",
-      navOptUrl: "/report",
+      navOptUrl: "/bugreport",
       id: uuid(),
     },
     {
       navOptTitle: "Support Us!",
-      navOptUrl: "/supportus",
+      navOptUrl: "/support",
       id: uuid(),
     },
     {
