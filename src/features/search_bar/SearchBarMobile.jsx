@@ -15,6 +15,7 @@ function SearchBarMobile() {
           onChange={(e) => {
             setSearchInput(e.target.value);
           }}
+          aria-label="header-search-field"
         />
         <FontAwesomeIcon
           icon={faMagnifyingGlass}

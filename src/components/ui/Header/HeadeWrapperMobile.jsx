@@ -43,7 +43,7 @@ function HeaderWrapperMobile({
       </Link>
       <div className={style.headerBanner}>FigureChanBanner</div>
       <div className={style.searchBarContainerMobile}>
-        <button className={style.searchBtnMobile}>
+        <button className={style.searchBtnMobile} aria-label="Search Button">
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
             size="xl"

@@ -22,8 +22,9 @@ function HeaderWrapperDesk() {
           onChange={(e) => {
             setSearchInput(e.target.value);
           }}
+          aria-label="header-search-field"
         />
-        <button className={style.searchBtn}>
+        <button className={style.searchBtn} aria-label="Search Button">
           <FontAwesomeIcon icon={faMagnifyingGlass} size="xl" color="white" />
         </button>
       </div>

@@ -87,11 +87,6 @@ function SubHeader() {
           </ul>
         </nav>
       </div>
-      {/* <div className={style.subHeaderRightContainer}>
-        <button>
-          <FontAwesomeIcon icon={faGear} size="2x" color="white" />
-        </button>
-      </div> */}
     </div>
   );
 }
