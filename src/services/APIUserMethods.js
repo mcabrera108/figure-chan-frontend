@@ -9,9 +9,10 @@ async function APIRegisterUser(formData) {
       password: formData.password,
     }),
   };
+  // "https://figure-chan-user-api-63a090ba3519.herokuapp.com/register"
   try {
     const response = await fetch(
-      "http://localhost:3000/register",
+      "https://figure-chan-user-api-63a090ba3519.herokuapp.com/register",
       requestOptions
     );
     const data = await response.json();
@@ -32,7 +33,10 @@ async function APILoginUser(formData) {
     }),
   };
   try {
-    const response = await fetch("http://localhost:3000/login", requestOptions);
+    const response = await fetch(
+      "https://figure-chan-user-api-63a090ba3519.herokuapp.com/login",
+      requestOptions
+    );
     const data = await response.json();
     return data;
   } catch (error) {
