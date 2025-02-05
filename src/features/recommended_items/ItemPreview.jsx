@@ -14,6 +14,7 @@ function ItemPreview({ itemInfo }) {
         style={{ fontSize: "2em" }}
         countryCode={itemInfo.countryCode}
         svg
+        alt={itemInfo.itemTitle}
       />
     </div>
   );

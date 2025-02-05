@@ -38,6 +38,9 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   display: flex;
   justify-content: center;
   align-items: center;
+  background: none;
+  outline: none;
+  border: none;
 }
 .menu {
   display: flex;

@@ -17,25 +17,27 @@ function HeaderWrapperMobile({
     <div className={style.headerWrapper}>
       <div className={style.menuContainer}>
         {toggleMenu ? (
-          <a
+          <button
             className={style.menu}
             onClick={() => {
               setToggleMenu(!toggleMenu);
               setSideNavVisible(false);
             }}
+            aria-label="Side Menu Exit"
           >
             <FontAwesomeIcon icon={faXmark} size="xl" color="white" />
-          </a>
+          </button>
         ) : (
-          <a
+          <button
             className={style.menu}
             onClick={() => {
               setToggleMenu(!toggleMenu);
               setSideNavVisible(true);
             }}
+            aria-label="Side Menu Toggle"
           >
             <FontAwesomeIcon icon={faBars} size="xl" color="white" />
-          </a>
+          </button>
         )}
       </div>
 
