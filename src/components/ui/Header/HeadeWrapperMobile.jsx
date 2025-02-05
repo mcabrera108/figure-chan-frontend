@@ -4,6 +4,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import figureChanBanner from "../../../assets/figure-chan-banner.png";
 import PropTypes from "prop-types";
 function HeaderWrapperMobile({
   searchVisible,
@@ -41,7 +42,9 @@ function HeaderWrapperMobile({
       <Link className={style.logoContainer} to={"/"}>
         FC
       </Link>
-      <div className={style.headerBanner}>FigureChanBanner</div>
+      <div className={style.headerPhotoContainer}>
+        <img src={figureChanBanner} alt="" />
+      </div>
       <div className={style.searchBarContainerMobile}>
         <button className={style.searchBtnMobile} aria-label="Search Button">
           <FontAwesomeIcon

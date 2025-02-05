@@ -16,7 +16,6 @@ $subheader-options-mobile: var(--subheader-options-mobile);
 .headerWrapper {
   display: flex;
   align-items: center;
-  padding: 0.9rem 0 0.9rem 0;
 }
 .logoContainer {
   font-family: var(--font-formal-family);
@@ -366,6 +365,17 @@ $subheader-options-mobile: var(--subheader-options-mobile);
 .sideNavSubOption:hover {
   background-color: var(--layout-sub-sidenav-hover-color);
 }
+.headerPhotoContainer {
+  min-width: 200px;
+  height: 80px;
+}
+.headerPhotoContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 25%;
+}
+
 @keyframes slide-in {
   0% {
     width: 0;
@@ -392,11 +402,24 @@ $subheader-options-mobile: var(--subheader-options-mobile);
     z-index: 999;
     padding: 0 0.5rem 0 0.5rem;
   }
+  .headerWrapper {
+    justify-content: space-between;
+  }
   .loginContainerMobile a {
     font-size: clamp(0.6rem, 0.8rem, 1rem);
   }
   .announcementContainer {
     font-size: 0.8rem;
+  }
+  .headerPhotoContainer {
+    min-width: 120px;
+    height: 60px;
+  }
+  .headerPhotoContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 25%;
   }
 }
 @media screen and (max-width: 344px) {
