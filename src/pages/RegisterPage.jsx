@@ -1,7 +1,7 @@
 import homestyle from "../style_modules/home.module.scss";
 import loginstyle from "../style_modules/login.module.scss";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SignInTextInput from "../components/form/input/SignInTextInput";
 import { APIRegisterUser } from "../services/APIUserMethods";
 import PasswordValidationField from "../components/form/input/PasswordValidationField";
@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { hasAllConditionsForPassword } from "../utils/validationMessage";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PopUpSuccess from "../components/ui/Body/PopUpSuccess";
 function RegisterPage() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
@@ -19,6 +20,7 @@ function RegisterPage() {
   const [isChecked, setIsChecked] = useState(false);
   const [passwordInputType, setPasswordInputType] = useState("password");
   const [confirmPassType, setConfirmPassType] = useState("password");
+  const [showMessagePopUp, setShowMessagePopUp] = useState(false);
 
   const isDisabled =
     !username ||
@@ -62,20 +64,33 @@ function RegisterPage() {
       email: email,
       password: password,
     });
-    if (apiResponse.redirectUrl) {
-      navigate(apiResponse.redirectUrl);
-    }
     setIncompleteField(false);
     setUsername("");
     setPassword("");
     setConfirmPassword("");
     setEmail("");
+    if (apiResponse.redirectUrl) {
+      setShowMessagePopUp(true);
+      navigate(apiResponse.redirectUrl);
+    }
   }
+
+  useEffect(() => {
+    if (showMessagePopUp) {
+      const showRef = setTimeout(() => {
+        setShowMessagePopUp(false);
+        clearTimeout(showRef);
+      }, 4000);
+    }
+  }, [showMessagePopUp]);
 
   return (
     <div className={loginstyle.mainContainer}>
       <div className={homestyle.homeContainer}>
         <div className={loginstyle.formPageWrapper}>
+          {showMessagePopUp && (
+            <PopUpSuccess str={"Successfully Created Account!"} />
+          )}
           <div className={loginstyle.loginFormHeaderContainer}>
             <h2 className={loginstyle.loginFormHeader}>
               Register for an account

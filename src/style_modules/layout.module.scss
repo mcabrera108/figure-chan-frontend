@@ -31,6 +31,16 @@ $subheader-options-mobile: var(--subheader-options-mobile);
   margin-right: 1rem;
   cursor: pointer;
 }
+.popUpContainer {
+  color: black;
+  background-color: rgb(255, 201, 54);
+  position: absolute;
+  padding: 0.5rem;
+  text-align: center;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+  width: 35%;
+}
 .menuContainer .menu {
   position: relative;
   height: 100%;
@@ -423,6 +433,9 @@ $subheader-options-mobile: var(--subheader-options-mobile);
     height: 100%;
     object-fit: cover;
     object-position: 0% 25%;
+  }
+  .popUpContainer {
+    width: 90%;
   }
 }
 @media screen and (max-width: 344px) {

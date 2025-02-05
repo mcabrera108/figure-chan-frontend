@@ -9,10 +9,10 @@ function HeaderWrapperDesk() {
   return (
     <div className={style.headerWrapper}>
       <Link className={style.logoContainer} to={"/"}>
-        Figure-Dev
+        Figure-Chan
       </Link>
       <div className={style.headerPhotoContainer}>
-        <img src={figureChanBanner} alt="" />
+        <img src={figureChanBanner} alt="Figure Chan Banner" />
       </div>
       {/* <span className={style.banner}>Figure-Dev Banner</span> */}
       {/*Include Form Here for Call to an API */}
