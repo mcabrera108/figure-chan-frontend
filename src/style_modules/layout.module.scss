@@ -307,7 +307,30 @@ $subheader-options-mobile: var(--subheader-options-mobile);
 .rightHeaderContainer {
   display: flex;
 }
+.loaderLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.responseContainer {
+  background: rgba(255, 182, 24, 0.884);
+  width: 100%;
+  color: black;
+  padding: 0.5rem 0.3rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
 
+.loader {
+  border: 1rem solid #fefffe;
+  border-radius: 50%;
+  border-top: 1rem solid #ec6c81;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
 /*Sidenav Styling*/
 .homeSideNavContainer {
   position: fixed;
