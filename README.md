@@ -2,7 +2,7 @@
 
 Frontend for Figure-Chan Website
 
-**Welcome to Figure-Chan! A portfolio project created for the purpose of improving upon the concepts of figure collecting websites, utilizing modern web development tools and frameworks. Furthermore, this project seeks to enhance the user experience by simplifying a variety of UI design choices that MFC has yet to address in their platform.**
+**Welcome to Figure-Chan! A portfolio project created for the purpose of improving on the concepts of figure collection websites. This application aims to give users a modern experience for collecting,selling,discussing anime figures.**
 
 ![alt text](https://i.imgur.com/56iCTrO.png)
 
